@@ -31,6 +31,30 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/AboutItem/AboutItemList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRJdGVtXEFib3V0SXRlbUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/AboutItem/CreateAboutItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRJdGVtXENyZWF0ZUFib3V0SXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/AboutItem/UpdateAboutItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRJdGVtXFVwZGF0ZUFib3V0SXRlbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/About/AboutList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQWJvdXRMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/About/CreateAbout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQ3JlYXRlQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/About/UpdateAbout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcVXBkYXRlQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/AdminLayout/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
