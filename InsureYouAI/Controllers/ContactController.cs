@@ -15,8 +15,8 @@ namespace InsureYouAI.Controllers
 
         public IActionResult ContactList()
         {
-            var abouts = _context.Abouts.ToList();
-            return View(abouts);
+            var contacts = _context.Contacts.ToList();
+            return View(contacts);
         }
 
         [HttpGet]
