@@ -7,7 +7,6 @@ namespace InsureYouAI.Controllers
     public class CategoryController : Controller
     {
         private readonly InsureContext _context;
-
         public CategoryController(InsureContext context)
         {
             _context = context;

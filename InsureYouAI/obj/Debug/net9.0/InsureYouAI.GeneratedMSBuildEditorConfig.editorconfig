@@ -59,6 +59,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Article/ArticleList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxBcnRpY2xlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Article/CreateArticle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxDcmVhdGVBcnRpY2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Article/UpdateArticle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxVcGRhdGVBcnRpY2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Category/CategoryList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcnlMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -173,6 +185,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Slider/UpdateSlider.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2xpZGVyXFVwZGF0ZVNsaWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Testimonial/CreateTestimonial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxcQ3JlYXRlVGVzdGltb25pYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Testimonial/TestimonialList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxcVGVzdGltb25pYWxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Testimonial/UpdateTestimonial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxcVXBkYXRlVGVzdGltb25pYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/TrailerVideo/CreateTrailerVideo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaWxlclZpZGVvXENyZWF0ZVRyYWlsZXJWaWRlby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/TrailerVideo/TrailerVideoList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaWxlclZpZGVvXFRyYWlsZXJWaWRlb0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/TrailerVideo/UpdateTrailerVideo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaWxlclZpZGVvXFVwZGF0ZVRyYWlsZXJWaWRlby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/_ViewImports.cshtml]
