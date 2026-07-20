@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "AI ile Yeni Makale Oluştur";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<style>
+    .ai-article-output {
+        background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+        border-color: #d0d9ff !important;
+    }
+
+    .article-content {
+        font-size: 0.95rem;
+        white-space: pre-wrap;
+    }
+
+    .article-content h1, .article-content h2, .article-content h3 {
+        color: #3a3a6e;
+        margin-top: 1.2rem;
+    }
+
+    .article-content p {
+        margin-bottom: 0.8rem;
+    }
+</style>
+
+<div class="card shadow-sm border-0">
+    <div class="card-body p-4">
+        <div class="d-flex align-items-center mb-4">
+            <h5 class="mb-0 fw-bold text-primary">AI ile Yapay Zeka Destekli Makale Oluştur</h5>
+        </div>
+        <hr />
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Makale İçeriği Özeti ve Anahtar Kelimeler</label>
+                <input type="text" name="prompt" class="form-control form-control-lg" />
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary px-4 shadow-sm">
+                    <i class="bi bi-plus-circle me-1"></i> Yapay Zeka Destekli Makale Oluştur
+                </button>
+            </div>
+        </form>
+        <br /><br />
+        @if (ViewBag.article != null)
+        {
+            <hr class="my-4" />
+            <div class="ai-article-output p-4 rounded-4 border shadow-sm">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <i class="bi bi-robot fs-4 text-primary"></i>
+                    <h5 class="mb-0 fw-bold text-primary">Oluşturulan AI Makalesi</h5>
+                </div>
+                <div class="article-content lh-lg text-dark">
+                    @Html.Raw(ViewBag.article.ToString())
+                </div>
+            </div>
+        }
+    </div>
+</div>
