@@ -39,6 +39,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRJdGVtXENyZWF0ZUFib3V0SXRlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/AboutItem/CreateAboutItemWithAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRJdGVtXENyZWF0ZUFib3V0SXRlbVdpdGhBSS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/AboutItem/UpdateAboutItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRJdGVtXFVwZGF0ZUFib3V0SXRlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -49,6 +53,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/About/CreateAbout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQ3JlYXRlQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/About/CreateAboutWithAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcQ3JlYXRlQWJvdXRXaXRoQUkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/About/UpdateAbout.cshtml]

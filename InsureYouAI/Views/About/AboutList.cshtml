@@ -27,7 +27,7 @@
                     {
                         <tr>
                             <td>@about.Title</td>
-                            <td>@about.Description</td>
+                            <td>@(about.Description?.Length > 50 ? about.Description.Substring(0,50) + "..." : about.Description)</td>
                             <td>
                                 <div class="table-actions d-flex align-items-center gap-3 fs-6">
                                     <a href="/Default/Index/" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitede Gör"><i class="bi bi-eye-fill"></i></a>
@@ -39,7 +39,7 @@
                     }
                 </tbody>
             </table>
-            @if (Model != null)
+            @if (Model != null && Model.Any())
             {
                 <button class="btn btn-secondary" disabled>Yeni Hakkımda Yazısı Girişi</button>
             }

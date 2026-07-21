@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "AI ile Yeni Hakkımda Yazısı Oluştur";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">
+                        <i class="bi bi-robot me-2"></i>
+                        AI ile Oluşturulan Hakkımızda Metni
+                    </h4>
+                </div>
+                <div class="card-body">
+                    @if (ViewBag.about != null)
+                    {
+                        <p class="text-muted" style="line-height: 1.8; text-align: justify;">
+                            @ViewBag.about
+                        </p>
+                    }
+                    else
+                    {
+                        <div class="text-center py-5">
+                            <div class="spinner-border text-primary" role="status"></div>
+                            <p class="mt-3 text-muted">Metin oluşturuluyor...</p>
+                        </div>
+                    }
+                </div>
+                <div class="card-footer text-end">
+                    <a asp-action="AboutList" class="btn btn-outline-secondary me-2">Geri Dön</a>
+                    <a asp-action="CreateAboutWithAI" class="btn btn-primary">Yeniden Oluştur</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
