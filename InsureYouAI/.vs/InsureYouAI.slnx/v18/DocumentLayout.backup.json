@@ -58,8 +58,7 @@
               "RelativeToolTip": "Views\\Category\\CreateCategory.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-20T06:49:07.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T06:49:07.271Z"
             },
             {
               "$type": "Document",
@@ -69,7 +68,7 @@
               "RelativeDocumentMoniker": "Views\\Article\\CreateArticleWithAI.cshtml",
               "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Article\\CreateArticleWithAI.cshtml",
               "RelativeToolTip": "Views\\Article\\CreateArticleWithAI.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-07-20T06:48:45.571Z",
               "EditorCaption": ""
@@ -82,7 +81,7 @@
               "RelativeDocumentMoniker": "Controllers\\ArticleController.cs",
               "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Controllers\\ArticleController.cs",
               "RelativeToolTip": "Controllers\\ArticleController.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAqwFIAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAUwEUAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-20T06:46:23.313Z",
               "EditorCaption": ""
@@ -109,8 +108,7 @@
               "RelativeToolTip": "Views\\Shared\\Components\\_AdminLayoutSidebarComponentPartial\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAACWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-19T15:05:02.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T15:05:02.542Z"
             }
           ]
         },
