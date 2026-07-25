@@ -1663,3 +1663,8 @@ C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\qpo3
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\p9ba1t4bj4-{0}-uupi7z924s-uupi7z924s.gz
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\gqgf36w24s-{0}-evaqb4rxar-evaqb4rxar.gz
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\h2v83s2pg7-{0}-i83hgtrnj1-i83hgtrnj1.gz
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
