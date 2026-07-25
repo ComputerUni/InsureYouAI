@@ -7,6 +7,30 @@
       "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\default\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\views\\shared\\components\\_defaultheadercontactcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\shared\\components\\_defaultheadercontactcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\views\\shared\\components\\_defaultheadercomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\shared\\components\\_defaultheadercomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\viewcomponents\\defaultviewcomponents\\_defaultheadercontactcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:viewcomponents\\defaultviewcomponents\\_defaultheadercontactcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\views\\shared\\components\\_defaultheadcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\shared\\components\\_defaultheadcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\viewcomponents\\defaultviewcomponents\\_defaultheadercomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:viewcomponents\\defaultviewcomponents\\_defaultheadercomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\viewcomponents\\defaultviewcomponents\\_defaultheadcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:viewcomponents\\defaultviewcomponents\\_defaultheadcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 743,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,20 +62,98 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DefaultHeaderContactComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_DefaultHeaderContactComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DefaultHeaderContactComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_DefaultHeaderContactComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-25T21:34:13.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DefaultHeadComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_DefaultHeadComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DefaultHeadComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_DefaultHeadComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-25T21:15:20.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Default\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Default\\Index.cshtml",
               "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Default\\Index.cshtml",
               "RelativeToolTip": "Views\\Default\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALYDAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-07-25T20:17:29.185Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "_DefaultHeaderContactComponentPartial.cs",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\ViewComponents\\DefaultViewComponents\\_DefaultHeaderContactComponentPartial.cs",
+              "RelativeDocumentMoniker": "ViewComponents\\DefaultViewComponents\\_DefaultHeaderContactComponentPartial.cs",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\ViewComponents\\DefaultViewComponents\\_DefaultHeaderContactComponentPartial.cs",
+              "RelativeToolTip": "ViewComponents\\DefaultViewComponents\\_DefaultHeaderContactComponentPartial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-25T21:32:47.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DefaultHeaderComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_DefaultHeaderComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DefaultHeaderComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_DefaultHeaderComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-25T21:21:49.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_DefaultHeaderComponentPartial.cs",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\ViewComponents\\DefaultViewComponents\\_DefaultHeaderComponentPartial.cs",
+              "RelativeDocumentMoniker": "ViewComponents\\DefaultViewComponents\\_DefaultHeaderComponentPartial.cs",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\ViewComponents\\DefaultViewComponents\\_DefaultHeaderComponentPartial.cs",
+              "RelativeToolTip": "ViewComponents\\DefaultViewComponents\\_DefaultHeaderComponentPartial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-25T21:20:29.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_DefaultHeadComponentPartial.cs",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\ViewComponents\\DefaultViewComponents\\_DefaultHeadComponentPartial.cs",
+              "RelativeDocumentMoniker": "ViewComponents\\DefaultViewComponents\\_DefaultHeadComponentPartial.cs",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\ViewComponents\\DefaultViewComponents\\_DefaultHeadComponentPartial.cs",
+              "RelativeToolTip": "ViewComponents\\DefaultViewComponents\\_DefaultHeadComponentPartial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-25T21:13:08.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DefaultController.cs",
               "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Controllers\\DefaultController.cs",
               "RelativeDocumentMoniker": "Controllers\\DefaultController.cs",
@@ -59,8 +161,7 @@
               "RelativeToolTip": "Controllers\\DefaultController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-25T20:17:09.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-25T20:17:09.16Z"
             }
           ]
         },

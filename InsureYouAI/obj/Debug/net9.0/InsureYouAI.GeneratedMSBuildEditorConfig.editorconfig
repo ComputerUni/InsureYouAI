@@ -191,6 +191,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0FkbWluTGF5b3V0U3dpdGNoZXJDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Shared/Components/_DefaultHeadComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0RlZmF1bHRIZWFkQ29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Shared/Components/_DefaultHeaderComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0RlZmF1bHRIZWFkZXJDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Shared/Components/_DefaultHeaderContactComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0RlZmF1bHRIZWFkZXJDb250YWN0Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/BURHAN/Desktop/InsureYouAI/InsureYouAI/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
