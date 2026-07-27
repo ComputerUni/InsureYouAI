@@ -4,219 +4,55 @@
 
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 @await Component.InvokeAsync("_DefaultHeadComponentPartial")
+
 <body>
-    <!-- header -->
+
     <header class="header-area header-three">
+
         @await Component.InvokeAsync("_DefaultHeaderComponentPartial")
 
         @await Component.InvokeAsync("_DefaultHeaderContactComponentPartial")
 
         @await Component.InvokeAsync("_DefaultNavbarComponentPartial")
     </header>
-    <!-- header-end -->
-    <!-- offcanvas-area -->
+
     @await Component.InvokeAsync("_DefaultMobileMenuComponentPartial")
-    <!-- offcanvas-end -->
-    <!-- main-area -->
+
     <main>
-        <!-- slider-area -->
+
         @await Component.InvokeAsync("_DefaultSliderComponentPartial")
-        <!-- slider-area-end -->
-        <!-- about-area -->
+
         @await Component.InvokeAsync("_DefaultAboutComponentPartial")
-        <!-- about-area-end -->
-        <!-- service-area -->
+
         @await Component.InvokeAsync("_DefaultInsureServiceComponentPartial")
-        <!-- service-details2-area-end -->
-        <!-- video-area -->
+
         @await Component.InvokeAsync("_DefaultTrailerVideoComponentPartial")
-        <!-- video-area-end -->
-        <!-- services-five-area -->
+
         @await Component.InvokeAsync("_DefaultServiceComponentPartial")
-        <!-- services-three-area -->
-        <!-- counter-area -->
+
         @await Component.InvokeAsync("_DefaultCounterComponentPartial")
-        <!-- counter-area-end -->
-        <!-- skill-area -->
+
         @await Component.InvokeAsync("_DefaultSkillComponentPartial")
-        <!-- skill-area-end -->
-        <!-- pricing-area -->
+
         @await Component.InvokeAsync("_DefaultPricingPlanComponentPartial")
-        <!-- pricing-area-end -->
-        <!-- testimonial-area -->
+
         @await Component.InvokeAsync("_DefaultTestimonialComponentPartial")
-        <!-- testimonial-area-end -->
-        <!-- gallery-area -->
+
         @await Component.InvokeAsync("_DefaultGalleryComponentPartial")
-        <!-- gallery-area-end -->
-        <!-- blog-area -->
+
         @await Component.InvokeAsync("_DefaultLast3ArticleComponentPartial")
-        <!-- blog-area-end -->
-        <!-- contact-area -->
+
         @await Html.PartialAsync("SendMessage", "Default")
-        <!-- contact-area-end -->
-        <!-- newslater-area -->
-        <section class="newslater-area" data-aos="fade-up" data-aos-duration="1000">
-            <div class="container" style="background-image: url(img/bg/newslater-bg.png); background-repeat: no-repeat; background-size: cover;">
-                <div class="row">
 
-                    <div class="col-xl-12 col-lg-12 col-md-12">
-                        <div class="section-title mb-25 text-center">
-                            <h2>Subscribe To Newsletter</h2>
-                            <p>Since 2007 we have been a visionary and a reliable insurance partner for world-class insurance.</p>
-                        </div>
-                        <form name="ajax-form" id="contact-form4" action="#" method="post" class="contact-form newslater">
-                            <div class="form-group">
-                                <input class="form-control" id="email2" name="email" type="email" placeholder="Email Address..." value="" required="">
-                                <button type="submit" class="btn btn-custom" id="send2">Subscribe Now</button>
-                            </div>
+        @await Html.PartialAsync("SubscribeEmail", "Default")
 
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <!-- newslater-aread-end -->
     </main>
-    <!-- main-area-end -->
-    <!-- footer -->
-    <footer class="footer-bg footer-p pt-240" style="background-color: #28314b;">
-        <div class="footer-top pb-70">
-            <div class="container">
-                <div class="row justify-content-between">
 
-                    <div class="col-xl-4 col-lg-4 col-sm-6">
-                        <div class="footer-widget mb-30" data-aos="fade-up" data-aos-duration="1000">
-                            <div class="f-widget-title">
-                                <h2> <img src="img/logo/f_logo.png" alt="img"></h2>
-                            </div>
-                            <div class="f-contact">
-                                <p>Suspendisse non sem ante. Cras pretium gravida leo a convallis. Nam malesuada interdum metus, sit amet dictum ante congue eu. Maecenas ut maximus enim.</p>
+    @await Component.InvokeAsync("_DefaultFooterComponentPartial")
 
-                            </div>
-                            <div class="footer-social mt-10">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-sm-6">
-                        <div class="footer-widget mb-30" data-aos="fade-up" data-aos-duration="1400">
-                            <div class="f-widget-title">
-                                <h2>Our Links</h2>
-                            </div>
-                            <div class="footer-link">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html"> About</a></li>
-                                    <li><a href="services.html"> Services </a></li>
-                                    <li><a href="contact.html"> Contact Us</a></li>
-                                    <li><a href="blog.html">Blog </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-sm-6">
-                        <div class="footer-widget mb-30" data-aos="fade-up" data-aos-duration="1600">
-                            <div class="f-widget-title">
-                                <h2>Contact Us</h2>
-                            </div>
-                            <div class="f-contact">
-                                <ul>
-                                    <li>
-                                        <i class="icon fal fa-phone"></i>
-                                        <span>1800-121-3637<br>+91-7052-101-786</span>
-                                    </li>
-                                    <li>
-                                        <i class="icon fal fa-envelope"></i>
-                                        <span>
-                                            <a href="mailto:info@example.com">info@example.com</a>
-                                            <br>
-                                            <a href="mailto:help@example.com">help@example.com</a>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <i class="icon fal fa-map-marker-check"></i>
-                                        <span>1247/Plot No. 39, 15th Phase,<br> LHB Colony, Kanpur</span>
-                                    </li>
+    @await Component.InvokeAsync("_DefaultScriptComponentPartial")
 
-                                </ul>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-3 col-sm-6">
-                        <div class="footer-widget mb-30" data-aos="fade-up" data-aos-duration="1800">
-                            <div class="f-widget-title">
-                                <h2>Latest Post</h2>
-                            </div>
-                            <div class="recent-blog-footer">
-                                <ul>
-                                    <li>
-                                        <div class="thum"> <img src="img/blog/s-blogimg-01.png" alt="img"></div>
-                                        <div class="text">
-                                            <a href="#">Nothing impossble to need hard work</a>
-                                            <span>7 March, 2020</span>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="thum"> <img src="img/blog/s-blogimg-02.png" alt="img"></div>
-                                        <div class="text">
-                                            <a href="#">Nothing impossble to need hard work</a>
-                                            <span>7 March, 2020</span>
-                                        </div>
-                                    </li>
-
-                                </ul>
-
-                                   
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="copyright-wrap">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12">
-                        <div class="copy-text text-center">
-                            Copyright &copy; Insureyou 2022 . All rights reserved.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer-end -->
-    <!-- JS here -->
-    <script src="/insureyou/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="/insureyou/js/vendor/jquery-3.6.0.min.js"></script>
-    <script src="/insureyou/js/popper.min.js"></script>
-    <script src="/insureyou/js/bootstrap.min.js"></script>
-    <script src="/insureyou/js/slick.min.js"></script>
-    <script src="/insureyou/js/ajax-form.js"></script>
-    <script src="/insureyou/js/paroller.js"></script>
-    <script src="/insureyou/js/wow.min.js"></script>
-    <script src="/insureyou/js/js_isotope.pkgd.min.js"></script>
-    <script src="/insureyou/js/imagesloaded.min.js"></script>
-    <script src="/insureyou/js/parallax.min.js"></script>
-    <script src="/insureyou/js/jquery.waypoints.min.js"></script>
-    <script src="/insureyou/js/jquery.counterup.min.js"></script>
-    <script src="/insureyou/js/jquery.scrollUp.min.js"></script>
-    <script src="/insureyou/js/jquery.meanmenu.min.js"></script>
-    <script src="/insureyou/js/parallax-scroll.js"></script>
-    <script src="/insureyou/js/swiper.min.js"></script>
-    <script src="/insureyou/js/aos.js"></script>
-    <script src="/insureyou/js/jquery.magnific-popup.min.js"></script>
-    <script src="/insureyou/js/element-in-view.js"></script>
-    <script src="/insureyou/js/main.js"></script>
 </body>
 </html>
