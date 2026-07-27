@@ -23,5 +23,6 @@ namespace InsureYouAI.Context
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<TrailerVideo> TrailerVideos { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<PricingPlanItem> PricingPlanItems { get; set; }
     }
 }
