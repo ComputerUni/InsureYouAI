@@ -8,5 +8,10 @@ namespace InsureYouAI.Controllers
         {
             return View();
         }
+
+        public PartialViewResult SendMessage()
+        {
+            return PartialView();
+        }
     }
 }
