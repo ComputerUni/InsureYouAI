@@ -3,19 +3,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InsureYouAI.ViewComponents.DefaultViewComponents
 {
-    public class _DefaultSliderComponentPartial : ViewComponent
+    public class _DefaultTrailerVideoComponentPartial : ViewComponent
     {
         private readonly InsureContext _context;
 
-        public _DefaultSliderComponentPartial(InsureContext context)
+        public _DefaultTrailerVideoComponentPartial(InsureContext context)
         {
             _context = context;
         }
 
         public IViewComponentResult Invoke()
         {
-            var values = _context.Sliders.ToList();
-            return View(values);
+            var value = _context.TrailerVideos.FirstOrDefault();
+            return View(value);
         }
     }
 }

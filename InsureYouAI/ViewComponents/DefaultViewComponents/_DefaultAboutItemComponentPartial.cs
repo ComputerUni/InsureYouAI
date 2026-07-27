@@ -3,19 +3,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InsureYouAI.ViewComponents.DefaultViewComponents
 {
-    public class _DefaultSliderComponentPartial : ViewComponent
+    public class _DefaultAboutItemComponentPartial : ViewComponent
     {
         private readonly InsureContext _context;
 
-        public _DefaultSliderComponentPartial(InsureContext context)
+        public _DefaultAboutItemComponentPartial(InsureContext context)
         {
             _context = context;
         }
 
         public IViewComponentResult Invoke()
         {
-            var values = _context.Sliders.ToList();
-            return View(values);
+            var aboutItems = _context.AboutItems.ToList();
+            return View(aboutItems);
         }
     }
 }
