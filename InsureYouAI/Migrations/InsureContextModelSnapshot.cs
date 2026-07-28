@@ -153,6 +153,9 @@ namespace InsureYouAI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ArticleId"));
 
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
@@ -176,6 +179,8 @@ namespace InsureYouAI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ArticleId");
+
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("CategoryId");
 
@@ -603,11 +608,17 @@ namespace InsureYouAI.Migrations
 
             modelBuilder.Entity("InsureYouAI.Entities.Article", b =>
                 {
+                    b.HasOne("InsureYouAI.Entities.AppUser", "AppUser")
+                        .WithMany("Articles")
+                        .HasForeignKey("AppUserId");
+
                     b.HasOne("InsureYouAI.Entities.Category", "Category")
                         .WithMany("Articles")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("AppUser");
 
                     b.Navigation("Category");
                 });
@@ -695,6 +706,8 @@ namespace InsureYouAI.Migrations
 
             modelBuilder.Entity("InsureYouAI.Entities.AppUser", b =>
                 {
+                    b.Navigation("Articles");
+
                     b.Navigation("Comments");
                 });
 

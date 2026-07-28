@@ -8,5 +8,16 @@ namespace InsureYouAI.Controllers
         {
             return View();
         }
+
+        public PartialViewResult GetBlog()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public IActionResult GetBlog(string keyword)
+        {
+            return View();
+        }
     }
 }

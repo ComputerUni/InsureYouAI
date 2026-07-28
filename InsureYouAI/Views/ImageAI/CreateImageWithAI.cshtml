@@ -1,0 +1,37 @@
+﻿@model string
+
+@{
+    ViewData["Title"] = "AI ile Oluşturulan Resim";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="card shadow-sm border-0">
+    <div class="card-body p-4">
+        <div class="d-flex align-items-center mb-4">
+            <h5 class="mb-0 fw-bold text-primary">HuggingFace ile Oluşturulan Görsel</h5>
+        </div>
+        <hr />
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Prompt Girişi Yapınız: </label>
+                <input type="text" name="prompt" required class="form-control form-control-lg" />
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary px-4 shadow-sm">
+                    <i class="bi bi-plus-circle me-1"></i> AI ile Resim Oluştur
+                </button>
+            </div>
+        </form>
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger mt-3">@ViewBag.Error</div>
+        }
+        @if (ViewBag.ImageBase64 != null)
+        {
+            <div class="mt-4 text-center">
+                <img src="@ViewBag.ImageBase64" alt="Oluşturulan Görsel" class="img-fluid rounded shadow" style="max-width:512px;" />
+            </div>
+        }
+    </div>
+</div>

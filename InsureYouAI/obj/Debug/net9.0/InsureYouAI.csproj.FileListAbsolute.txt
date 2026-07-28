@@ -1751,3 +1751,6 @@ C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\3c09
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\j875bnz85j-{0}-cawamr81cl-cawamr81cl.gz
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\51k8pdz1vt-{0}-rdmflf6124-rdmflf6124.gz
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\xh0y6musl7-{0}-3pshquy7w2-3pshquy7w2.gz
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\X.PagedList.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\X.PagedList.Mvc.Core.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\InsureYouAI.MvcApplicationPartsAssemblyInfo.cs
