@@ -9,6 +9,11 @@ namespace InsureYouAI.Controllers
             return View();
         }
 
+        public IActionResult BlogDetail()
+        {
+            return View();
+        }
+
         public PartialViewResult GetBlog()
         {
             return PartialView();
