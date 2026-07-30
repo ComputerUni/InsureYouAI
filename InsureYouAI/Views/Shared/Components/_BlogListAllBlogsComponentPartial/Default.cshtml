@@ -20,13 +20,13 @@
                     </ul>
                 </div>
                 <h2>
-                    <a href="blog-details.html">
+                    <a href="/Blog/BlogDetail/@item.ArticleId">
                         @item.Title
                     </a>
                 </h2>
                 <p>@(item.Content.Length > 300 ? item.Content.Substring(0, 300) + "..." : item.Content)</p>
                 <div class="blog__btn">
-                    <a href="#" class="btn">Devamını Oku </a>
+                    <a href="/Blog/BlogDetail/@item.ArticleId" class="btn">Devamını Oku </a>
                 </div>
             </div>
         </div>

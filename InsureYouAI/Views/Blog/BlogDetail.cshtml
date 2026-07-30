@@ -29,77 +29,19 @@
                     <div class="col-lg-8">
                         <div class="blog-details-wrap">
 
-                            @await Component.InvokeAsync("_BlogDetailContentComponentPartial")
+                            @await Component.InvokeAsync("_BlogDetailContentComponentPartial", new { id = ViewBag.i })
 
                             @await Component.InvokeAsync("_BlogDetailNextAndPrevPostComponentPartial")
 
                             @await Component.InvokeAsync("_BlogDetailAboutAuthorComponentPartial")
-                            
-                            <div class="comment__wrap pb-45">
-                                <div class="comment__wrap-title">
-                                    <h5>Comments</h5>
-                                </div>
-                                <div class="single__comment mb-35">
-                                    <div class="comments-avatar">
-                                        <img src="img/blog/comment/c_01.png" alt="">
-                                    </div>
-                                    <div class="comment-text">
-                                        <div class="avatar-name mb-15">
-                                            <h6>ALina Kelian</h6>
-                                            <span>19th May 2021</span>
-                                        </div>
-                                        <p>The bee's knees bite your arm off bits and bobs he nicked it gosh gutted mate blimey, old off his nut argy bargy vagabond buggered dropped.</p>
-                                        <a href="#" class="comment-reply mt-15"><i class="fas fa-reply"></i> Reply</a>
-                                    </div>
-                                </div>
-                                <div class="single__comment children mb-35">
-                                    <div class="comments-avatar">
-                                        <img src="img/blog/comment/c_02.png" alt="">
-                                    </div>
-                                    <div class="comment-text">
-                                        <div class="avatar-name mb-15">
-                                            <h6>Rlex Kelian <i class="fas fa-bookmark"></i></h6>
-                                            <span>19th May 2021</span>
-                                        </div>
-                                        <p>Do one say wind up buggered bobby bite your arm off gutted mate, David victoria sponge cup of char chap fanny around.</p>
-                                        <a href="#" class="comment-reply mt-15"><i class="fas fa-reply"></i> Reply</a>
-                                    </div>
-                                </div>
-                                <div class="single__comment">
-                                    <div class="comments-avatar">
-                                        <img src="img/blog/comment/c_03.png" alt="">
-                                    </div>
-                                    <div class="comment-text">
-                                        <div class="avatar-name mb-15">
-                                            <h6>Roboto Alex</h6>
-                                            <span>21th May 2021</span>
-                                        </div>
-                                        <p>Baking cakes is cobblers wellies William geeza bits and bobs what a plonker it's your round,</p>
-                                        <a href="#" class="comment-reply mt-15"><i class="fas fa-reply"></i> Reply</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="comments" class="comments-area  mt-45">
-                                <div id="respond" class="comment-respond">
-                                    <h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/finco/?p=2112#respond" style="display:none;">Cancel reply</a></small></h3>
-                                    <form action="http://wordpress.zcube.in/finco/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
-                                        <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>
-                                        <p class="comment-field"><i class="fas fa-user"></i><input id="author" placeholder="Your Name" name="author" type="text"></p>
-                                        <p class="comment-field"><i class="fas fa-envelope"></i><input id="email" placeholder="your-real-email@example.com" name="email" type="text"></p>
-                                        <p class="comment-field"><i class="fas fa-globe"></i><input id="url" name="url" placeholder="http://your-site-name.com" type="text"> </p>
-                                        <p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p>
-                                        <p class="form-submit">
-                                            <input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="2112" id="comment_post_ID">
-                                            <input type="hidden" name="comment_parent" id="comment_parent" value="0">
-                                        </p>
-                                    </form>
-                                </div>
-                                <!-- #respond -->
-                            </div>
+
+                            @await Component.InvokeAsync("_BlogDetailCommentListComponentPartial", new { id = ViewBag.i })
+
+                            @await Html.PartialAsync("AddComment", "Blog")
 
                         </div>
                     </div>
-                    <!-- #right side -->
+
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <aside class="sidebar-widget">
 
@@ -112,10 +54,10 @@
                             @await Component.InvokeAsync("_BlogListLast3RecentBlogComponentPartial")
 
                             @await Component.InvokeAsync("_BlogListTagComponentPartial")
-                          
+
                         </aside>
                     </div>
-                    <!-- #right side end -->
+
                 </div>
             </div>
         </section>
