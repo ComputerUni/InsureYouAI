@@ -19,5 +19,15 @@ namespace InsureYouAI.Controllers
             var values = _userManager.Users.ToList();
             return View(values);
         }
+
+        public async Task<IActionResult> UserProfileWithAI(string id)
+        {
+            var values = await _userManager.FindByIdAsync(id);
+            ViewBag.name = values.Name;
+            ViewBag.surname = values.Surname;
+            ViewBag.imageUrl = values.ImageUrl;
+            ViewBag.description = values.Description;
+            return View();
+        }
     }
 }

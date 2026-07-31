@@ -9,6 +9,9 @@ namespace InsureYouAI.Entities
         public string ImageUrl { get; set; }
         public string Description { get; set; }
         public List<Comment> Comments { get; set; }
-        public List<Article> Articles { get; set; }  
+        public List<Article> Articles { get; set; }
+        public string? Education { get; set; }
+        public string? City { get; set; }
+        public string? Title { get; set; }
     }
 }
