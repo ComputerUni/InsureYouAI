@@ -1,7 +1,9 @@
 using InsureYouAI.Context;
 using InsureYouAI.Entities;
 using InsureYouAI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,9 +19,20 @@ builder.Services.AddDbContext<InsureContext>();
 
 builder.Services.AddIdentity<AppUser, IdentityRole>()
     .AddEntityFrameworkStores<InsureContext>()
-    .AddDefaultTokenProviders(); 
+    .AddDefaultTokenProviders();
 
-builder.Services.AddControllersWithViews();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Login/Login";
+    options.LogoutPath = "/Logout/Logout";
+});
+
+builder.Services.AddControllersWithViews(options =>
+{
+    var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+    options.Filters.Add(new AuthorizeFilter(policy));
+});
 
 builder.Services.AddHttpClient();
 
@@ -37,6 +50,8 @@ app.MapHub<ChatHub>("/chathub");
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

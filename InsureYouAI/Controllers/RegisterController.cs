@@ -1,10 +1,12 @@
 ﻿using InsureYouAI.Dtos;
 using InsureYouAI.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InsureYouAI.Controllers
 {
+    [AllowAnonymous]
     public class RegisterController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -38,7 +40,7 @@ namespace InsureYouAI.Controllers
             };
 
             await _userManager.CreateAsync(appUser, createUserRegisterDto.Password);
-            return RedirectToAction("UserList");
+            return RedirectToAction("Login");
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using InsureYouAI.Context;
 using InsureYouAI.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
 using System.Text;
@@ -7,6 +8,7 @@ using System.Text.Json;
 
 namespace InsureYouAI.Controllers
 {
+    [AllowAnonymous]
     public class BlogController : Controller
     {
         private readonly InsureContext _context;
