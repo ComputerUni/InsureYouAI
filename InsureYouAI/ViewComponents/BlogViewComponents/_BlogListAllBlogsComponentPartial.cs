@@ -22,6 +22,7 @@ namespace InsureYouAI.ViewComponents.BlogViewComponents
             var values = _context.Articles
                 .Include(x => x.Category)
                 .Include(y => y.AppUser)
+                .Include(z => z.Comments)
                 .ToPagedList(page, 6);
 
             return View(values);
