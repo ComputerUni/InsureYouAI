@@ -1,6 +1,7 @@
 using InsureYouAI.Context;
 using InsureYouAI.Entities;
 using InsureYouAI.Models;
+using InsureYouAI.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -33,6 +34,8 @@ builder.Services.AddControllersWithViews(options =>
     var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
     options.Filters.Add(new AuthorizeFilter(policy));
 });
+
+builder.Services.AddScoped<ForecastService>();
 
 builder.Services.AddHttpClient();
 
