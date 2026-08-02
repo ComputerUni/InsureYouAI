@@ -104,6 +104,19 @@ namespace InsureYouAI.Controllers
             client.Disconnect(true);
             #endregion
 
+            #region AIMessageSend
+            AIMessage aiMessage = new AIMessage()
+            {
+                MessageDetail = textContent,
+                ReceiveMail = message.Email,
+                ReceiveNameSurname = message.NameSurname,
+                SendDate = DateTime.Now
+            };
+
+            _context.AIMessages.Add(aiMessage);
+            _context.SaveChanges();
+            #endregion
+
             return RedirectToAction("Index");
         }
 
