@@ -1,0 +1,47 @@
+﻿@model List<Comment>
+<div class="col-12 col-lg-6 col-xl-6 d-flex">
+    <div class="card rounded-4 w-100">
+        <div class="card-header bg-transparent">
+            <div class="d-flex align-items-center">
+                <h6 class="mb-0">Müşteri Yorumları</h6>
+                <div class="fs-5 ms-auto dropdown">
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="review-list">
+                @foreach (var comment in Model)
+                {
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="review-user flex-shrink-0">
+                            <img src="@comment.AppUser.ImageUrl" width="65" height="65" class="rounded-circle" alt="">
+                        </div>
+                        <div class="review-content ms-3 w-100">
+                            <div class="d-flex align-items-center justify-content-between mb-1">
+                                <h6 class="mb-0 fw-bold">@comment.AppUser.Name @comment.AppUser.Surname</h6>
+                                <small class="text-muted">@comment.CommentDate.ToString("dd-MMM-yyyy")</small>
+                            </div>
+
+                            <div class="rates cursor-pointer fs-6 mb-2">
+                                <i class="bx bxs-star text-warning"></i>
+                                <i class="bx bxs-star text-warning"></i>
+                                <i class="bx bxs-star text-warning"></i>
+                                <i class="bx bxs-star text-warning"></i>
+                                <i class="bx bxs-star text-warning"></i>
+                            </div>
+
+                            <p class="mb-0">@comment.CommentDetail</p>
+                        </div>
+                    </div>
+                    <hr>
+                }
+            </div>
+        </div>
+    </div>
+</div>

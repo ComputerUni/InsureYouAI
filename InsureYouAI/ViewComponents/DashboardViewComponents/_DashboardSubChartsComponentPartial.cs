@@ -1,14 +1,13 @@
 ﻿using InsureYouAI.Context;
+using InsureYouAI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InsureYouAI.ViewComponents.DashboardViewComponents
 {
-    public class _DashboardRadialChartComponentPartial(InsureContext _context) : ViewComponent
+    public class _DashboardSubChartsComponentPartial() : ViewComponent
     {
         public IViewComponentResult Invoke()
         {
-            ViewBag.v1 = _context.Policies.Count();
-            ViewBag.v2 = _context.Policies.Where(x => x.Status == "Active").Count();
             return View();
         }
     }
