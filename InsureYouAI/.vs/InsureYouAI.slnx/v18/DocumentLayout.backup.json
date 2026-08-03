@@ -7,8 +7,28 @@
       "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\default\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\views\\shared\\components\\_dashboardtopsellingcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\shared\\components\\_dashboardtopsellingcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\views\\shared\\components\\_dashboardsubcharts2componentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\shared\\components\\_dashboardsubcharts2componentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\views\\shared\\components\\_dashboardsubcharts3componentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\shared\\components\\_dashboardsubcharts3componentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\views\\shared\\components\\_dashboardsubcharts1componentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\shared\\components\\_dashboardsubcharts1componentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\views\\shared\\components\\_blogdetailaboutauthorcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\shared\\components\\_blogdetailaboutauthorcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\views\\blog\\blogdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\blog\\blogdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\viewcomponents\\blogdetailviewcomponents\\_blogdetailaboutauthorcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\blog\\bloglist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\views\\blog\\blogdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:views\\blog\\blogdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|c:\\users\\burhan\\desktop\\insureyouai\\insureyouai\\viewcomponents\\blogdetailviewcomponents\\_blogdetailnextandprevpostcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3492D34B-1813-FF58-CE12-B0F1113DA530}|InsureYouAI.csproj|solutionrelative:viewcomponents\\blogdetailviewcomponents\\_blogdetailnextandprevpostcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -42,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 743,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -64,18 +80,70 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DashboardTopSellingComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_DashboardTopSellingComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DashboardTopSellingComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_DashboardTopSellingComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwDYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-03T18:58:02.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DashboardSubCharts1ComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_DashboardSubCharts1ComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DashboardSubCharts1ComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_DashboardSubCharts1ComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-03T18:55:33.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DashboardSubCharts3ComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_DashboardSubCharts3ComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DashboardSubCharts3ComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_DashboardSubCharts3ComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-03T18:55:06.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DashboardSubCharts2ComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_DashboardSubCharts2ComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_DashboardSubCharts2ComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_DashboardSubCharts2ComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-03T18:55:01.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_BlogDetailAboutAuthorComponentPartial\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_BlogDetailAboutAuthorComponentPartial\\Default.cshtml",
               "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_BlogDetailAboutAuthorComponentPartial\\Default.cshtml",
               "RelativeToolTip": "Views\\Shared\\Components\\_BlogDetailAboutAuthorComponentPartial\\Default.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-08-03T18:04:47.535Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "AppUser.cs",
               "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Entities\\AppUser.cs",
               "RelativeDocumentMoniker": "Entities\\AppUser.cs",
@@ -83,12 +151,11 @@
               "RelativeToolTip": "Entities\\AppUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T18:03:43.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T18:03:43.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "_BlogDetailAboutAuthorComponentPartial.cs",
               "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\ViewComponents\\BlogDetailViewComponents\\_BlogDetailAboutAuthorComponentPartial.cs",
               "RelativeDocumentMoniker": "ViewComponents\\BlogDetailViewComponents\\_BlogDetailAboutAuthorComponentPartial.cs",
@@ -96,12 +163,11 @@
               "RelativeToolTip": "ViewComponents\\BlogDetailViewComponents\\_BlogDetailAboutAuthorComponentPartial.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T17:58:41.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T17:58:41.416Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "BlogList.cshtml",
               "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Blog\\BlogList.cshtml",
               "RelativeDocumentMoniker": "Views\\Blog\\BlogList.cshtml",
@@ -109,8 +175,7 @@
               "RelativeToolTip": "Views\\Blog\\BlogList.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-03T17:24:02.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T17:24:02.714Z"
             },
             {
               "$type": "Document",
@@ -120,14 +185,14 @@
               "RelativeDocumentMoniker": "Views\\Default\\Index.cshtml",
               "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Default\\Index.cshtml",
               "RelativeToolTip": "Views\\Default\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-08-03T17:17:21.371Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Shared\\Components\\_BlogDetailNextAndPrevPostComponentPartial\\Default.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\Components\\_BlogDetailNextAndPrevPostComponentPartial\\Default.cshtml",
@@ -135,12 +200,11 @@
               "RelativeToolTip": "Views\\Shared\\Components\\_BlogDetailNextAndPrevPostComponentPartial\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-03T16:25:18.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T16:25:18.492Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "_BlogDetailNextAndPrevPostComponentPartial.cs",
               "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\ViewComponents\\BlogDetailViewComponents\\_BlogDetailNextAndPrevPostComponentPartial.cs",
               "RelativeDocumentMoniker": "ViewComponents\\BlogDetailViewComponents\\_BlogDetailNextAndPrevPostComponentPartial.cs",
@@ -148,8 +212,7 @@
               "RelativeToolTip": "ViewComponents\\BlogDetailViewComponents\\_BlogDetailNextAndPrevPostComponentPartial.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T16:14:54.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T16:14:54.389Z"
             },
             {
               "$type": "Document",
@@ -159,10 +222,9 @@
               "RelativeDocumentMoniker": "Views\\Blog\\BlogDetail.cshtml",
               "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\Views\\Blog\\BlogDetail.cshtml",
               "RelativeToolTip": "Views\\Blog\\BlogDetail.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-03T15:04:11.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T15:04:11.595Z"
             }
           ]
         },

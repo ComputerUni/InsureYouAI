@@ -1,87 +1,62 @@
-﻿@* _RadialCharts.cshtml *@
-<div class="row row-cols-1 row-cols-lg-4 radial-charts g-4">
+﻿<div class="row row-cols-1 row-cols-lg-4 row-cols-xl-4">
     <div class="col">
-        <div class="card rounded-4">
+        <div class="card rounded-4 bg-purple">
             <div class="card-body">
-                <div class="text-center">
-                    <p class="mb-1">Poliçeler</p>
-                    <h4>@ViewBag.v1</h4>
+                <div class="d-flex align-items-center">
+                    <div class="">
+                        <h4 class="mb-0 text-white">@ViewBag.v1</h4>
+                        <p class="mb-1 text-white">Poliçeler</p>
+                    </div>
+                    <div class="ms-auto fs-3 text-white">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
                 </div>
-                <div id="chart3"></div>
             </div>
         </div>
     </div>
     <div class="col">
-        <div class="card rounded-4">
+        <div class="card rounded-4 bg-primary">
             <div class="card-body">
-                <div class="text-center">
-                    <p class="mb-1">Geçen Ay Eklenen Poliçeler</p>
-                    <h4>@ViewBag.v3</h4>
+                <div class="d-flex align-items-center">
+                    <div class="">
+                        <h4 class="mb-0 text-white">@ViewBag.v3</h4>
+                        <p class="mb-1 text-white">Geçen Ay Eklenen Poliçeler</p>
+                    </div>
+                    <div class="ms-auto fs-3 text-white">
+                        <i class="bi bi-calendar-plus"></i>
+                    </div>
                 </div>
-                <div id="chart4"></div>
             </div>
         </div>
     </div>
-
     <div class="col">
-        <div class="card rounded-4">
+        <div class="card rounded-4 bg-orange">
             <div class="card-body">
-                <div class="text-center">
-                    <p class="mb-1">Toplam Prim Geliri</p>
-                    <h4>@ViewBag.v4</h4>
+                <div class="d-flex align-items-center">
+                    <div class="">
+                        <h4 class="mb-0 text-white">@ViewBag.v4</h4>
+                        <p class="mb-1 text-white">Toplam Prim Geliri</p>
+                    </div>
+                    <div class="ms-auto fs-3 text-white">
+                        <i class="bi bi-currency-dollar"></i>
+                    </div>
                 </div>
-                <div id="chart5"></div>
             </div>
         </div>
     </div>
-
     <div class="col">
-        <div class="card rounded-4">
+        <div class="card rounded-4 bg-success">
             <div class="card-body">
-                <div class="text-center">
-                    <p class="mb-1">Bu Ay Sona Erecek Poliçeler</p>
-                    <h4>@ViewBag.v5</h4>
+                <div class="d-flex align-items-center">
+                    <div class="">
+                        <h4 class="mb-0 text-white">@ViewBag.v5</h4>
+                        <p class="mb-1 text-white">Bu Ay Sona Erecek Poliçeler</p>
+                    </div>
+                    <div class="ms-auto fs-3 text-white">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
                 </div>
-                <div id="chart6"></div>
             </div>
         </div>
     </div>
 </div>
-
-@section Scripts {
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script>
-        function createRadialChart(selector, value, color) {
-            var options = {
-                chart: {
-                    height: 180,
-                    type: "radialBar",
-                },
-                series: [value],
-                plotOptions: {
-                    radialBar: {
-                        hollow: {
-                            size: "70%",
-                        },
-                        track: {
-                            background: "#f2f2f2"
-                        },
-                        dataLabels: {
-                            show: false
-                        }
-                    }
-                },
-                colors: [color],
-            };
-
-            var chart = new ApexCharts(document.querySelector(selector), options);
-            chart.render();
-        }
-
-        // Chartları çağır
-        createRadialChart("#chart3", 50, "#20c997"); // Orders
-        createRadialChart("#chart4", 25, "#6f42c1"); // Unique Visitors
-        createRadialChart("#chart5", 45, "#d63384"); // Impressions
-        createRadialChart("#chart6", 55, "#ffc107"); // Followers
-    </script>
-}
