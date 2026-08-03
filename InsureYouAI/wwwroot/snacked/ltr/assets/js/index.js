@@ -108,95 +108,91 @@ $(function() {
 
         chart.render();
 		
-		
-		
-	
-	// chart 2
     
+    // chart 2
     var options = {
-            chart: {
-                height: 300,
-                type: 'radialBar',
-            },
-            plotOptions: {
-                radialBar: {
-                  //startAngle: -135,
-                  //endAngle: 135,
-                  hollow: {
-                      margin: 0,
-                      size: '45%',
-                      background: 'transparent',
-                      image: undefined,
-                      imageOffsetX: 0,
-                      imageOffsetY: 0,
-                      position: 'front',
-                      dropShadow: {
+        chart: {
+            height: 300,
+            type: 'radialBar',
+        },
+        plotOptions: {
+            radialBar: {
+                hollow: {
+                    margin: 0,
+                    size: '45%',
+                    background: 'transparent',
+                    image: undefined,
+                    imageOffsetX: 0,
+                    imageOffsetY: 0,
+                    position: 'front',
+                    dropShadow: {
                         enabled: false,
                         top: 3,
                         left: 0,
                         blur: 4,
                         opacity: 0.24
-                      }
-                    },
-                    track: {
-                      background: '#eeedfb',
-                      strokeWidth: '50%',
-                      margin: 12, // margin is in pixels
-                      dropShadow: {
+                    }
+                },
+                track: {
+                    background: '#eeedfb',
+                    strokeWidth: '50%',
+                    margin: 12,
+                    dropShadow: {
                         enabled: false,
                         top: -3,
                         left: 0,
                         blur: 4,
                         opacity: 0.35
-                      }
+                    }
+                },
+                dataLabels: {
+                    name: {
+                        color: '#000',
+                        fontSize: '14px',
+                        offsetY: -5
                     },
-                    dataLabels: {
-                        name: {
-                            color:'#000',
-                            fontSize: '14px',
-                            offsetY: -5
-                        },
-                        value: {
-                            color: '#000',
-                            fontSize: '25px',
-                            offsetY: 5
-                        },
-                        total: {
-                            show: true,
-                            label: 'Total',
-                            color: '#000',
-                            formatter: function (w) {
-                                // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-                                return 300
-                            }
+                    value: {
+                        color: '#000',
+                        fontSize: '25px',
+                        offsetY: 5
+                    },
+                    total: {
+                        show: true,
+                        label: 'Poliçe Sayısı',
+                        color: '#000',
+                        formatter: function (w) {
+                            return total;
                         }
                     }
                 }
-            },
-            stroke: {
-               lineCap: "butt",
-           },
-            colors: ["#8932ff", "#ff6632", "#32bfff"],
-            series: [90, 80, 60],
-            labels: ['Complete', 'In Progress', 'Started'],
-            responsive: [{
-                      breakpoint: 1280,
-                      options: {
-                          chart: {
-                              height: 350
-                          }
-                      }
-                  }]
-            
-        }
+            }
+        },
+        stroke: {
+            lineCap: "butt",
+        },
+        colors: ["#8932ff", "#ff6632", "#32bfff"],
+        series: [
+            Math.round(active / total * 100),
+            Math.round(expired / total * 100),
+            Math.round(thisMonth / total * 100)
+        ],
+        labels: ['Aktif', 'Süresi Dolan', 'Bu Ay Sona Erecek'],
+        responsive: [{
+            breakpoint: 1280,
+            options: {
+                chart: {
+                    height: 350
+                }
+            }
+        }]
+    }
 
-       var chart = new ApexCharts(
-            document.querySelector("#chart2"),
-            options
-        );
-        
-        chart.render();
-	
+    var chart = new ApexCharts(
+        document.querySelector("#chart2"),
+        options
+    );
+
+    chart.render();
 	
 	
 	

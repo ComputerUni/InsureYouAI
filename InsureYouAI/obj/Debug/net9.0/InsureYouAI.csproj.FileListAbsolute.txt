@@ -855,7 +855,6 @@ C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\rqdg
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\4938vi91af-{0}-ma712fryio-ma712fryio.gz
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\4ovwov7ot3-{0}-obnr8lv4gf-obnr8lv4gf.gz
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\5rcbziakfr-{0}-dqddu45mf6-dqddu45mf6.gz
-C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\e0t2vgz0g3-{0}-278o9bt61m-278o9bt61m.gz
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\blk61vzm8v-{0}-2fz36mvk82-2fz36mvk82.gz
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\9yxi2i5ths-{0}-dd6z7egasc-dd6z7egasc.gz
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\5pbj2cgakf-{0}-ivz8q5hc99-ivz8q5hc99.gz
@@ -1793,3 +1792,4 @@ C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\runtimes\win-x6
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\runtimes\win-x86\native\MklImports.dll
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\runtimes\win-x86\native\MklProxyNative.dll
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\runtimes\win-x86\native\libiomp5md.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\e0t2vgz0g3-{0}-2hkeuy1lje-2hkeuy1lje.gz

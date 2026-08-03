@@ -3,6 +3,7 @@ using InsureYouAI.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
+using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
 
@@ -46,11 +47,15 @@ namespace InsureYouAI.Controllers
             return PartialView();
         }
 
+        
         [HttpPost]
         public async Task<IActionResult> AddComment(Comment comment)
         {
+            if (!User.Identity.IsAuthenticated)
+                return RedirectToAction("Login", "Login");
+
             comment.CommentDate = DateTime.Now;
-            comment.AppUserId = "7386e6b9-29ea-409b-9b49-4872873f0583";
+            comment.AppUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             using (var client = new HttpClient())
             {

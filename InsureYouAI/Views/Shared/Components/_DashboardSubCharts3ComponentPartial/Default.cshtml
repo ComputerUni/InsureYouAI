@@ -1,0 +1,53 @@
+﻿<div class="col">
+    <div class="card rounded-4">
+        <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <div>
+                    <h4 class="mb-0">Aylık Giderler</h4>
+                    <p class="mb-0">Ağustos 2026 (TL)</p>
+                </div>
+                <div class="fs-2 text-danger">
+                    <i class="bi bi-pie-chart-fill"></i>
+                </div>
+            </div>
+            <canvas id="monthlyExpensesChart" style="max-height:320px;"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const labels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ExpenseLabels));
+
+    const generateColors = (n, alpha) =>
+        Array.from({ length: n }, (_, i) => `hsla(${Math.round(i * 360 / n)}, 70%, 60%, ${alpha})`);
+
+    const ctxExpenses = document.getElementById('monthlyExpensesChart').getContext('2d');
+    const monthlyExpensesChart = new Chart(ctxExpenses, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Giderler',
+                data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ExpenseValues)),
+                backgroundColor: generateColors(labels.length, 0.7),
+                borderColor: generateColors(labels.length, 1),
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'bottom' },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.label + ': ' + context.raw.toLocaleString('tr-TR') + " TL";
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
