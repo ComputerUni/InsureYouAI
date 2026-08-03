@@ -2,6 +2,7 @@
 using InsureYouAI.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
+using System.Security.Claims;
 
 namespace InsureYouAI.Controllers
 {
@@ -29,6 +30,8 @@ namespace InsureYouAI.Controllers
         [HttpPost]
         public IActionResult CreateArticle(Article article)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            article.AppUserId = userId;
             article.CreatedDate = DateTime.Now;
             _context.Articles.Add(article);
             _context.SaveChanges();

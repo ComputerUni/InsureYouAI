@@ -11,5 +11,5 @@
             <li><i class="fal fa-calendar-alt"></i> @Model.CreatedDate.ToString("dd-MMM-yyyy")</li>
         </ul>
     </div>
-    <p>@Model.Content</p>
+    <p>@Html.Raw(Model.Content)</p>
 </div>

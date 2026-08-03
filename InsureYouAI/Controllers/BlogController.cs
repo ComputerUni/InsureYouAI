@@ -2,6 +2,7 @@
 using InsureYouAI.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text;
@@ -21,6 +22,12 @@ namespace InsureYouAI.Controllers
 
         public IActionResult BlogList()
         {
+            return View();
+        }
+
+        public IActionResult GetBlogByCategory(int id)
+        {
+            ViewBag.c = id;
             return View();
         }
 

@@ -23,24 +23,11 @@
 
     <main>
 
-        <section class="inner-blog b-details-p pt-120 pb-120">
+        <section class="inner-blog pt-120 pb-120">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8">
-                        <div class="blog-details-wrap">
 
-                            @await Component.InvokeAsync("_BlogDetailContentComponentPartial", new { id = ViewBag.i })
-
-                            @await Component.InvokeAsync("_BlogDetailNextAndPrevPostComponentPartial", new { id = ViewBag.i })
-
-                            @await Component.InvokeAsync("_BlogDetailAboutAuthorComponentPartial", new { id = ViewBag.i })
-
-                            @await Component.InvokeAsync("_BlogDetailCommentListComponentPartial", new { id = ViewBag.i })
-
-                            @await Html.PartialAsync("AddComment", "Blog")
-
-                        </div>
-                    </div>
+                    @await Component.InvokeAsync("_BlogListByCategoryComponentPartial", new { id = ViewBag.c })
 
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <aside class="sidebar-widget">
@@ -57,7 +44,6 @@
 
                         </aside>
                     </div>
-
                 </div>
             </div>
         </section>

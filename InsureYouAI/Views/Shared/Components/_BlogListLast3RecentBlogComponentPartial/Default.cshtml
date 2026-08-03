@@ -1,15 +1,30 @@
 ﻿@model List<Article>
 
-<section id="recent-posts-4" class="widget widget_recent_entries">
-    <h2 class="widget-title">Son Yazılar</h2>
-    <ul>
+<section id="recent-posts-4" class="widget widget_recent_entries p-4 bg-white rounded-3 shadow-sm border-0">
+    <h2 class="widget-title mb-4 pb-2 fw-bold text-dark border-bottom" style="font-size: 1.25rem;">
+        Son Yazılar
+    </h2>
+    <ul class="list-unstyled mb-0">
         @foreach (var item in Model)
         {
-            <li style="margin-bottom:10px;">
-                <a href="#">@item.Title</a>
-                <br />
-                <span class="post-date" style="display:block; margin-top:4px;">@item.CreatedDate.ToString("dd-MMM-yyyy")</span>
+            <li class="mb-3 pb-3 border-bottom border-light">
+                <h6 class="mb-2">
+                    <a href="/Blog/BlogDetail/@item.ArticleId" class="text-decoration-none text-dark fw-semibold text-hover-primary" style="font-size: 0.95rem; line-height: 1.4;">
+                        @item.Title
+                    </a>
+                </h6>
+                <div class="text-muted" style="font-size: 0.8rem;">
+                    <i class="far fa-calendar-alt text-primary me-1"></i>
+                    <span>@item.CreatedDate.ToString("dd MMMM yyyy")</span>
+                </div>
             </li>
         }
     </ul>
 </section>
+
+<style>
+    .text-hover-primary:hover {
+        color: #0d6efd !important;
+        transition: color 0.2s ease-in-out;
+    }
+</style>

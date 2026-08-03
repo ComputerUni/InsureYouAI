@@ -1,18 +1,26 @@
 ﻿<div class="posts_navigation pt-35 pb-35">
-    <div class="row align-items-center">
+    <div class="row align-items-center p-3">
+        <!-- Önceki Post -->
         <div class="col-xl-4 col-md-5">
             <div class="prev-link">
-                <span>Önceki Post</span>
-                <h4><a href="#">Tips Minimalist</a></h4>
+                <span class="d-block text-muted small mb-1">Önceki Post</span>
+                <h4 style="line-height: 1.4 !important; height: auto !important;">
+                    <a href="#" class="text-decoration-none text-break d-inline-block">@ViewBag.prevArticleTitle</a>
+                </h4>
             </div>
         </div>
-        <div class="col-xl-4 col-md-2 text-left text-md-center">
-            <a href="blog.html" class="blog-filter"><img src="/defaultimages/c_d01.png" alt=""></a>
+
+        <div class="col-xl-4 col-md-2 text-center my-3 my-md-0">
+            <a href="/Blog/BlogList" class="blog-filter"><img src="/defaultimages/c_d01.png" alt=""></a>
         </div>
-        <div class="col-xl-4 col-md-5">
-            <div class="next-link text-left text-md-right">
-                <span>Sonraki Post</span>
-                <h4><a href="#">Less Is More</a></h4>
+
+        <!-- Sonraki Post -->
+        <div class="col-xl-4 col-md-5 text-start text-md-end">
+            <div class="next-link">
+                <span class="d-block text-muted small mb-1">Sonraki Post</span>
+                <h4 style="line-height: 1.4 !important; height: auto !important;">
+                    <a href="#" class="text-decoration-none text-break d-inline-block">@ViewBag.nextArticleTitle</a>
+                </h4>
             </div>
         </div>
     </div>

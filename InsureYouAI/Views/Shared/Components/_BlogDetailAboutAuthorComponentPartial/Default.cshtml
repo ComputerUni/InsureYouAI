@@ -1,23 +1,23 @@
-﻿<div class="avatar__wrap text-center mb-45">
-    <div class="avatar-img">
-        <img src="img/blog/comment/avatar.png" alt="">
+﻿@model AppUser
+
+<div class="avatar__wrap text-center p-4 bg-white rounded-4 shadow-sm border my-4">
+    <div class="avatar-img mb-3">
+        <img style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;" src="@Model.ImageUrl" alt="@Model.Name @Model.Surname" class="shadow-sm border border-3 border-white">
     </div>
+
     <div class="avatar__info">
-        <br /><br />
-        <h5>Mehmet Kadir Güngör</h5>
-        <div class="avatar__info-social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+        <h5 class="fw-bold text-dark mb-2">@Model.Name @Model.Surname</h5>
+
+        <div class="avatar__info-social mb-3">
+            <a href="#" class="text-muted mx-1 fs-6"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-muted mx-1 fs-6"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-muted mx-1 fs-6"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-muted mx-1 fs-6"><i class="fab fa-behance"></i></a>
+            <a href="#" class="text-muted mx-1 fs-6"><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
-    <div class="avatar__wrap-content">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequa aute irure dolor.
-        </p>
+
+    <div class="avatar__wrap-content px-2">
+        <p class="text-muted small mb-0">@Model.Description</p>
     </div>
 </div>
