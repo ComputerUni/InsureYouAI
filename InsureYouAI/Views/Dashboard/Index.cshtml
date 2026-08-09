@@ -15,7 +15,14 @@
 
 @await Component.InvokeAsync("_DashboardRadialChartComponentPartial")
 
-@await Component.InvokeAsync("_DashboardTopSellingComponentPartial")
+<div class="row g-4">
+    <div class="col-12 col-lg-6 d-flex">
+        @await Component.InvokeAsync("_DashboardTopSellingComponentPartial")
+    </div>
+    <div class="col-12 col-lg-6 d-flex">
+        @await Component.InvokeAsync("_DashboardForecastingPoliciesSalesComponentPartial")
+    </div>
+</div>
 
 @await Component.InvokeAsync("_DashboardSubChartsComponentPartial")
 

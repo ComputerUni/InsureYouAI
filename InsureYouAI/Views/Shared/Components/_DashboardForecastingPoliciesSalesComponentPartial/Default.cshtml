@@ -1,0 +1,38 @@
+﻿<div class="card rounded-4 w-100">
+    <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+            <h6 class="mb-0">En Çok Satan Poliçe Türleri</h6>
+        </div>
+        <div>
+            var percent = ViewBag.total > 0 ? (int)Math.Round((decimal)item.Count / (decimal)ViewBag.total * 100, 0) : 0;
+            var emoji = item.Type switch
+            {
+            "Kasko" => "🚗",
+            "Trafik" => "🚦",
+            "Konut" => "🏠",
+            "Sağlık" => "🩺",
+            "Seyahat" => "✈️",
+            "Ferdi Kaza" => "👤",
+            "DASK" => "🏢",
+            _ => "🛡️"
+            };
+            <div class="d-flex align-items-start gap-3 align-items-center mb-3">
+                <div class="product-box border d-flex align-items-center justify-content-center rounded-3 bg-light fs-4" style="width:50px; height:50px;">
+                    emoji
+                </div>
+                <div class="flex-grow-1">
+                    <div class="progress-wrapper">
+                        <p class="my-1">item.Type <span class="float-end">(item.Count Poliçe) <span class="ms-3 fw-bold">percent%</span></span></p>
+                        <div class="progress" style="height: 4px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: percent%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            }
+        </div>
+    </div>
+</div>
+
+
