@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Kategoriler";
     Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
 }
 
 <div class="card">
@@ -25,12 +26,13 @@
                 <tbody>
                     @foreach(var category in Model)
                     {
+                        count++;
                         <tr>
-                            <td>@category.CategoryId</td>
+                            <td>@count</td>
                             <td>@category.CategoryName</td>
                             <td>
                                 <div class="table-actions d-flex align-items-center gap-3 fs-6">
-                                    <a href="/Default/Index/" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitede Gör"><i class="bi bi-eye-fill"></i></a>
+                                    <a href="/Blog/GetBlogByCategory/@category.CategoryId" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitede Gör"><i class="bi bi-eye-fill"></i></a>
                                     <a href="/Category/UpdateCategory/@category.CategoryId" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Güncelle"><i class="bi bi-pencil-fill"></i></a>
                                     <a href="/Category/DeleteCategory/@category.CategoryId" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sil"><i class="bi bi-trash-fill"></i></a>
                                 </div>

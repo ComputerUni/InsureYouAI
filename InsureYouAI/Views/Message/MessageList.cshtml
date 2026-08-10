@@ -1,4 +1,5 @@
-﻿@model List<Message>
+﻿@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<Message>
 @{
     ViewData["Title"] = "Mesajlar";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -52,6 +53,14 @@
                 </tbody>
             </table>
             <a href="/Message/CreateMessage" class="btn btn-info">Yeni Mesaj Girişi</a>
+            <div>
+                @Html.PagedListPager(Model, page => Url.Action("MessageList", new { page }), new PagedListRenderOptions
+                {
+                    UlElementClasses = new[] { "pagination", "mb-0", "mt-4" },
+                    LiElementClasses = new[] { "page-item" },
+                    PageClasses = new[] { "page-link" }
+                })
+            </div>
         </div>
     </div>
 </div>

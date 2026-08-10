@@ -1,8 +1,10 @@
 ﻿using InsureYouAI.Context;
 using InsureYouAI.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
 using System.Security.Claims;
+using X.PagedList.Extensions;
 
 namespace InsureYouAI.Controllers
 {
@@ -15,10 +17,12 @@ namespace InsureYouAI.Controllers
             _context = context;
         }
 
-        public IActionResult ArticleList()
+        public IActionResult ArticleList(int page = 1)
         {
-            var articles = _context.Articles.ToList();
-            return View(articles);
+            ViewBag.ControllerName = "Makaleler";
+            ViewBag.PageName = "Makale Listesi";
+            var articles = _context.Articles.Include(x => x.AppUser).ToList();
+            return View(articles.ToPagedList(page,8));
         }
 
         [HttpGet]

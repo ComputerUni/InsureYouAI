@@ -1793,3 +1793,6 @@ C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\refint\InsureYo
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\InsureYouAI.pdb
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\InsureYouAI.genruntimeconfig.cache
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\ref\InsureYouAI.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\dkrzzdpjcf-{0}-46ivnnk30l-46ivnnk30l.gz
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\mp5yg3rbie-{0}-bon9ngzove-bon9ngzove.gz
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\0qtpm20w04-{0}-oapm0uvoo5-oapm0uvoo5.gz

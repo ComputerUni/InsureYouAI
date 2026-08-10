@@ -1,6 +1,7 @@
 ﻿using InsureYouAI.Context;
 using InsureYouAI.Entities;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList.Extensions;
 
 namespace InsureYouAI.Controllers
 {
@@ -13,10 +14,10 @@ namespace InsureYouAI.Controllers
             _context = context;
         }
 
-        public IActionResult MessageList()
+        public IActionResult MessageList(int page = 1)
         {
             var messages = _context.Messages.ToList();
-            return View(messages);
+            return View(messages.ToPagedList(page, 8));
         }
 
         [HttpGet]

@@ -1,8 +1,8 @@
-﻿@model List<Article>
+﻿@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<Article>
 @{
     ViewData["Title"] = "Makaleler";
     Layout = "~/Views/AdminLayout/Index.cshtml";
-    int count = 0;
 }
 
 <div class="card">
@@ -28,15 +28,14 @@
                 <tbody>
                     @foreach (var article in Model)
                     {
-                        count++;
                         <tr>
-                            <td>@count</td>
+                            <td>@article.ArticleId</td>
                             <td>@article.Title</td>
-                            <td>Yazar Adı</td>
+                            <td>@article.AppUser.Name @article.AppUser.Surname</td>
                             <td>@article.CreatedDate.ToString("dd-MMM-yyyy")</td>
                             <td>
                                 <div class="table-actions d-flex align-items-center gap-3 fs-6">
-                                    <a href="/Default/Index/" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitede Gör"><i class="bi bi-eye-fill"></i></a>
+                                    <a href="/Blog/BlogDetail/@article.ArticleId" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitede Gör"><i class="bi bi-eye-fill"></i></a>
                                     <a href="/Article/UpdateArticle/@article.ArticleId" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Güncelle"><i class="bi bi-pencil-fill"></i></a>
                                     <a href="/Article/DeleteArticle/@article.ArticleId" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sil"><i class="bi bi-trash-fill"></i></a>
                                 </div>
@@ -46,6 +45,14 @@
                 </tbody>
             </table>
             <a href="/Article/CreateArticle" class="btn btn-info">Yeni Makale Girişi</a>
+            <div>
+                @Html.PagedListPager(Model, page => Url.Action("ArticleList", new { page }), new PagedListRenderOptions
+                {
+                    UlElementClasses = new[] { "pagination", "mb-0", "mt-4" },
+                    LiElementClasses = new[] { "page-item" },
+                    PageClasses = new[] { "page-link" }
+                })
+            </div>
         </div>
     </div>
 </div>
