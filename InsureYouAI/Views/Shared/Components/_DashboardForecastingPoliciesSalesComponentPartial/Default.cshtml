@@ -1,38 +1,41 @@
 ﻿<div class="card rounded-4 w-100">
     <div class="card-body">
         <div class="d-flex align-items-center mb-3">
-            <h6 class="mb-0">En Çok Satan Poliçe Türleri</h6>
+            <h6 class="mb-0">Poliçe Satış Tahmini (2026)</h6>
         </div>
         <div>
-            var percent = ViewBag.total > 0 ? (int)Math.Round((decimal)item.Count / (decimal)ViewBag.total * 100, 0) : 0;
-            var emoji = item.Type switch
+            @foreach (var item in ViewBag.Forecast)
             {
-            "Kasko" => "🚗",
-            "Trafik" => "🚦",
-            "Konut" => "🏠",
-            "Sağlık" => "🩺",
-            "Seyahat" => "✈️",
-            "Ferdi Kaza" => "👤",
-            "DASK" => "🏢",
-            _ => "🛡️"
-            };
-            <div class="d-flex align-items-start gap-3 align-items-center mb-3">
-                <div class="product-box border d-flex align-items-center justify-content-center rounded-3 bg-light fs-4" style="width:50px; height:50px;">
-                    emoji
-                </div>
-                <div class="flex-grow-1">
-                    <div class="progress-wrapper">
-                        <p class="my-1">item.Type <span class="float-end">(item.Count Poliçe) <span class="ms-3 fw-bold">percent%</span></span></p>
-                        <div class="progress" style="height: 4px;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: percent%"></div>
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="product-box border d-flex align-items-center justify-content-center rounded-3 bg-light fs-5" style="width:50px; height:50px;">
+                        📅
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="progress-wrapper">
+                            <p class="my-1">
+                                @item.Month
+                                <span class="float-end d-flex align-items-center gap-2">
+                                    <span class="text-muted small">@item.Lower - @item.Upper</span>
+
+                                    @if (item.IsPositive)
+                                    {
+                                        <span class="badge bg-success-subtle text-success">↑ %@item.ChangePercent</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger-subtle text-danger">↓ %@Math.Abs(item.ChangePercent)</span>
+                                    }
+
+                                    <span class="fw-bold">@item.Value Poliçe</span>
+                                </span>
+                            </p>                            <div class="progress" style="height: 4px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: @((item.Value / 100.0 * 100))%"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <hr>
-            }
-        </div>
+        }
     </div>
 </div>
-
-
+</div>

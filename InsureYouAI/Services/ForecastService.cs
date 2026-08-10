@@ -25,15 +25,15 @@ namespace InsureYouAI.Services
             _mlContext = new MLContext();
         }
 
-        public PolicySalesForecast GetForecast(List<PolicySalesData> salesData, int horizon = 3)
+        public PolicySalesForecast GetForecast(List<PolicySalesData> salesData, int horizon = 5)
         {
             var dataView = _mlContext.Data.LoadFromEnumerable(salesData);
             var forecastingPipeline = _mlContext.Forecasting.ForecastBySsa(
                 outputColumnName: "ForecastedValues",
                 inputColumnName: "SaleCount",
-                windowSize: 6,
+                windowSize: 4,
                 seriesLength: 12,
-                trainSize: salesData.Count - horizon,
+                trainSize: salesData.Count,
                 horizon: horizon,
                 confidenceLevel: 0.95f,
                 confidenceLowerBoundColumn: "LowerBoundValues",

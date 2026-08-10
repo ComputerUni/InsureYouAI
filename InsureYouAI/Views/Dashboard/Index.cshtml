@@ -26,24 +26,20 @@
 
 @await Component.InvokeAsync("_DashboardSubChartsComponentPartial")
 
-@await Component.InvokeAsync("_DashboardCommentListComponentPartial")
+<div class="row g-4">
 
-<script src="/snacked/ltr/assets/js/bootstrap.bundle.min.js"></script>
-<script src="/snacked/ltr/assets/js/jquery.min.js"></script>
-<script src="/snacked/ltr/assets/plugins/simplebar/js/simplebar.min.js"></script>
-<script src="/snacked/ltr/assets/plugins/metismenu/js/metisMenu.min.js"></script>
-<script src="/snacked/ltr/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-<script src="/snacked/ltr/assets/js/pace.min.js"></script>
+    <div class="col-12 col-lg-6 d-flex">
+        @await Component.InvokeAsync("_DashboardCommentListComponentPartial")
+    </div>
 
-<script src="/snacked/ltr/assets/plugins/chartjs/js/Chart.min.js"></script>
-<script src="/snacked/ltr/assets/plugins/chartjs/js/Chart.extension.js"></script>
-<script src="/snacked/ltr/assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
-<script src="/snacked/ltr/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-<script src="/snacked/ltr/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+    
+    <div class="col-12 col-lg-6 d-flex">
 
-<script src="/snacked/ltr/assets/js/app.js"></script>
-<script src="/snacked/ltr/assets/js/index.js"></script>
-<script>
-    new PerfectScrollbar(".review-list")
-    new PerfectScrollbar(".chat-talk")
-</script>
+        @await Component.InvokeAsync("_DashboardAppUserQuickViewTableComponentPartial")
+
+    </div>
+
+</div>
+
+
+@await Component.InvokeAsync("_DashboardScriptsComponentPartial")
