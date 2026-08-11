@@ -3,90 +3,138 @@
 @{
     ViewData["Title"] = "Mesajlar";
     Layout = "~/Views/AdminLayout/Index.cshtml";
-    int count = 0;
+    int count = (Model.PageNumber - 1) * Model.PageSize; // Sayfalar arası sıra numarasının doğru devam etmesi için
     string currentPriority = ViewBag.SelectedPriority as string;
 }
 
-<div class="card">
-    <div class="card-body">
-        <div class="d-flex align-items-center">
-            <h5 class="mb-0">Gelen Mesajlar Listesi</h5>
-            <form method="get" asp-action="MessageList" class="d-flex align-items-center gap-2">
-                <select name="priority" class="form-select form-select-sm" onchange="this.form.submit()">
-                    <option value="">Tüm Öncelikler</option>
-                    <!option value="High" @(currentPriority == "High" ? "selected" : "")>Yüksek</!option>
-                    <!option value="Medium" @(currentPriority == "Medium" ? "selected" : "")>Orta</!option>
-                    <!option value="Low" @(currentPriority == "Low" ? "selected" : "")>Düşük</!option>
-                </select>
-            </form>
-            <form class="ms-auto position-relative">
-                <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-search"></i></div>
-                <input class="form-control ps-5" type="text" placeholder="Aramak için bir kelime giriniz...">
-            </form>
+<div class="card shadow-sm border-0 rounded-4">
+    <div class="card-body p-4">
+
+        <!-- Üst Başlık ve Filtreleme Alanı -->
+        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+            <div>
+                <h4 class="mb-1 text-dark fw-bold">Gelen Mesajlar Listesi</h4>
+                <p class="text-muted small mb-0">Sistem üzerinden gönderilen tüm iletişim mesajlarını ve yapay zeka analizlerini buradan yönetebilirsiniz.</p>
+            </div>
+
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+                <!-- Önceliğe Göre Filtreleme -->
+                <form method="get" asp-action="MessageList" class="d-flex align-items-center">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-funnel"></i></span>
+                        <select name="priority" class="form-select form-select-sm border-start-0 ps-0" onchange="this.form.submit()">
+                            <option value="">Tüm Öncelikler</option>
+                            <!option value="High" @(currentPriority == "High" ? "selected" : "")>Yüksek</!option>
+                            <!option value="Medium" @(currentPriority == "Medium" ? "selected" : "")>Orta</!option>
+                            <!option value="Low" @(currentPriority == "Low" ? "selected" : "")>Düşük</!option>
+                        </select>
+                    </div>
+                </form>
+
+                <!-- Arama Kutusu -->
+                <form class="position-relative">
+                    <input class="form-control form-control-sm ps-5 rounded-pill bg-light border-0" type="text" placeholder="Mesajlarda ara...">
+                    <span class="position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"><i class="bi bi-search"></i></span>
+                </form>
+            </div>
         </div>
-        <div class="table-responsive mt-3">
-            <table class="table align-middle">
-                <thead class="table-secondary">
+
+        <!-- Tablo Alanı -->
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light text-uppercase fs-7 text-secondary">
                     <tr>
-                        <th>#</th>
-                        <th>Ad Soyad</th>
-                        <th>Konu</th>
-                        <th>Email</th>
-                        <th>Mesaj Detayı</th>
-                        <th>Mesaj Tarihi</th>
-                        <th>Öncelik</th>
-                        <th>İşlemler</th>
+                        <th class="py-3 rounded-start">#</th>
+                        <th class="py-3">Ad Soyad</th>
+                        <th class="py-3">Konu</th>
+                        <th class="py-3">Email</th>
+                        <th class="py-3">Mesaj Detayı</th>
+                        <th class="py-3">Mesaj Tarihi</th>
+                        <th class="py-3 text-center">Öncelik</th>
+                        <th class="py-3 text-end rounded-end">İşlemler</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var message in Model)
+                    @if (Model != null && Model.Any())
                     {
-                        count++;
+                        foreach (var message in Model)
+                        {
+                            count++;
+                            <tr>
+                                <td class="fw-semibold text-muted">@count</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-sm bg-light-primary text-primary rounded-circle d-flex align-items-center justify-content-center me-2 fw-bold" style="width: 35px; height: 35px; font-size: 0.85rem;">
+                                            @message.NameSurname.Substring(0, 1).ToUpper()
+                                        </div>
+                                        <span class="fw-medium text-dark">@message.NameSurname</span>
+                                    </div>
+                                </td>
+                                <td class="text-dark">@message.Subject</td>
+                                <td class="text-muted">@message.Email</td>
+                                <td class="text-muted" style="max-width: 200px;">
+                                    @(message.MessageDetail?.Length > 25 ? message.MessageDetail.Substring(0, 25) + "..." : message.MessageDetail)
+                                </td>
+                                <td><span class="text-muted small">@message.SendDate.ToString("dd MMM yyyy HH:mm")</span></td>
+                                <td class="text-center">
+                                    @if (message.Priority == "Low")
+                                    {
+                                        <span class="badge px-3 py-2 bg-success-subtle text-success fw-semibold rounded-pill">Düşük</span>
+                                    }
+                                    else if (message.Priority == "Medium")
+                                    {
+                                        <span class="badge px-3 py-2 bg-warning-subtle text-warning fw-semibold rounded-pill">Orta</span>
+                                    }
+                                    else if (message.Priority == "High")
+                                    {
+                                        <span class="badge px-3 py-2 bg-danger-subtle text-danger fw-semibold rounded-pill">Yüksek</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge px-3 py-2 bg-info-subtle text-info fw-semibold rounded-pill">Yok</span>
+                                    }
+                                </td>
+                                <td class="text-end">
+                                    <div class="d-flex align-items-center justify-content-end gap-2">
+                                        <a href="/Default/Index/" class="btn btn-sm btn-light text-primary" data-bs-toggle="tooltip" title="Mesajı Aç">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                        <a href="/Message/UpdateMessage/@message.MessageId" class="btn btn-sm btn-light text-warning" data-bs-toggle="tooltip" title="Güncelle">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <a href="/Message/DeleteMessage/@message.MessageId" class="btn btn-sm btn-light text-danger" data-bs-toggle="tooltip" title="Sil" onclick="return confirm('Bu mesajı silmek istediğinize emin misiniz?');">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
                         <tr>
-                            <td>@count</td>
-                            <td>@message.NameSurname</td>
-                            <td>@message.Subject</td>
-                            <td>@message.Email</td>
-                            <td>@(message.MessageDetail?.Length > 15 ? message.MessageDetail.Substring(0, 15) + "..." : message.MessageDetail)</td>
-                            @if (message.Priority == "Low")
-                            {
-                                <td><span class="badge text-bg-success">Düşük</span></td>
-                            }
-                            else if (message.Priority == "Medium")
-                            {
-                                <td><span class="badge text-bg-warning">Orta</span></td>
-                            }
-                            else if (message.Priority == "High")
-                            {
-                                <td><span class="badge text-bg-danger">Yüksek</span></td>
-
-                            }
-                            else
-                            {
-                                <td><span class="badge text-bg-info">Yok</span></td>
-
-                            }
-                            <td>@message.SendDate.ToString("dd-MMM-yyyy")</td>
-                            <td>
-                                <div class="table-actions d-flex align-items-center gap-3 fs-6">
-                                    <a href="/Default/Index/" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mesajı Aç"><i class="bi bi-eye-fill"></i></a>
-                                    <a href="/Message/UpdateMessage/@message.MessageId" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Güncelle"><i class="bi bi-pencil-fill"></i></a>
-                                    <a href="/Message/DeleteMessage/@message.MessageId" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sil"><i class="bi bi-trash-fill"></i></a>
-                                </div>
-                            </td>
+                            <td colspan="8" class="text-center py-4 text-muted">Kayıtlı mesaj bulunamadı.</td>
                         </tr>
                     }
                 </tbody>
             </table>
-            <a href="/Message/CreateMessage" class="btn btn-info">Yeni Mesaj Girişi</a>
+        </div>
+
+        <!-- Alt Bölüm: Yeni Ekle Butonu ve Sayfalama -->
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between mt-4 pt-3 border-top gap-3">
+            <a href="/Message/CreateMessage" class="btn btn-primary btn-sm px-4 rounded-pill shadow-sm">
+                <i class="bi bi-plus-lg me-1"></i> Yeni Mesaj Girişi
+            </a>
+
             <div>
                 @Html.PagedListPager(Model, page => Url.Action("MessageList", new { page, priority = ViewBag.SelectedPriority }), new PagedListRenderOptions
                 {
-                    UlElementClasses = new[] { "pagination", "mb-0", "mt-4" },
+                    UlElementClasses = new[] { "pagination", "pagination-sm", "mb-0" },
                     LiElementClasses = new[] { "page-item" },
-                    PageClasses = new[] { "page-link" }
+                    PageClasses = new[] { "page-link", "rounded-circle", "mx-1" }
                 })
             </div>
         </div>
+
     </div>
 </div>
