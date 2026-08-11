@@ -17,30 +17,35 @@
             </div>
         </div>
         <div class="row" data-aos="fade-up" data-aos-duration="1400">
-            @foreach(var item in Model) {
-            <div class="col-lg-4 col-md-6">
-                <div class="single-post2 hover-zoomin mb-30 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
-                    <div class="blog-thumb2">
-                        <a href="blog-details.html"><img style="width:650px; height:350px;" src="@item.CoverImageUrl" alt="img"></a>
-                    </div>
-                    <div class="blog-content2">
-                        <div class="b-meta">
-                            <div class="meta-info">
-                                <ul>
-                                    <li><i class="fal fa-user"></i> @item.AppUser.Name @item.AppUser.Surname</li>
-                                    <li><i class="fal fa-automobile"></i> @item.Category.CategoryName</li>
-                                    <li><i class="fal fa-automobile"></i> @item.CreatedDate.ToString("dd-MMM-yyyy")</li>
-
-                                </ul>
-                            </div>
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-post2 hover-zoomin mb-30 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+                        <div class="blog-thumb2">
+                            <a href="blog-details.html"><img style="width:750px; height:350px;" src="@item.CoverImageUrl" alt="img"></a>
                         </div>
-                        <h4><a href="blog-details.html">@item.Title</a></h4>
-                        <p>@(item.Content.Length > 100 ? item.Content.Substring(0,100) + "..." : item.Content)</p>
+                        <div class="blog-content2">
+                            <div class="b-meta">
+                                <div class="meta-info">
+                                    <ul>
+                                        <li><i class="fal fa-user"></i> @item.AppUser.Name @item.AppUser.Surname</li>
+                                        <li><i class="fal fa-automobile"></i> @item.Category.CategoryName</li>
+                                        <li><i class="fal fa-automobile"></i> @item.CreatedDate.ToString("dd-MMM-yyyy")</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <h4><a href="/Blog/BlogDetail/@item.ArticleId">@item.Title</a></h4>
+                            @{
+                                var rawText = System.Text.RegularExpressions.Regex.Replace(item.Content ?? "", "<.*?>", "");
+                                var plainText = System.Net.WebUtility.HtmlDecode(rawText);
+                            }
+                            <p>@(plainText.Length > 300 ? plainText.Substring(0, 300) + "..." : plainText)</p>
+                        </div>
                     </div>
                 </div>
-            </div>
             }
-           
+
         </div>
     </div>
 </section>

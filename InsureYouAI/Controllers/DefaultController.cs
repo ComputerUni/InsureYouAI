@@ -99,7 +99,7 @@ namespace InsureYouAI.Controllers
 
             SmtpClient client = new SmtpClient();
             client.Connect("smtp.gmail.com", 587, false);
-            client.Authenticate("deneme@gmail.com", "uygulama sifresi");
+            client.Authenticate("deneme@gmail.com", "");
             client.Send(mimeMessage);
             client.Disconnect(true);
             #endregion

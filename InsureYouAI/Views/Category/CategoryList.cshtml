@@ -1,8 +1,8 @@
-﻿@model List<Category>
+﻿@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<Category>
 @{
     ViewData["Title"] = "Kategoriler";
     Layout = "~/Views/AdminLayout/Index.cshtml";
-    int count = 0;
 }
 
 <div class="card">
@@ -24,11 +24,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach(var category in Model)
+                    @foreach (var category in Model)
                     {
-                        count++;
                         <tr>
-                            <td>@count</td>
+                            <td>@category.CategoryId</td>
                             <td>@category.CategoryName</td>
                             <td>
                                 <div class="table-actions d-flex align-items-center gap-3 fs-6">
@@ -42,6 +41,14 @@
                 </tbody>
             </table>
             <a href="/Category/CreateCategory" class="btn btn-info">Yeni Kategori Girişi</a>
+        </div>
+        <div>
+            @Html.PagedListPager(Model, page => Url.Action("CategoryList", new { page }), new PagedListRenderOptions
+            {
+                UlElementClasses = new[] { "pagination", "mb-0", "mt-4" },
+                LiElementClasses = new[] { "page-item" },
+                PageClasses = new[] { "page-link" }
+            })
         </div>
     </div>
 </div>

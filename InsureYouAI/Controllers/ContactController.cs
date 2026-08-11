@@ -15,6 +15,8 @@ namespace InsureYouAI.Controllers
 
         public IActionResult ContactList()
         {
+            ViewBag.ControllerName = "İletişim";
+            ViewBag.PageName = "İletişim Bilgileri";
             var contacts = _context.Contacts.ToList();
             return View(contacts);
         }
@@ -22,6 +24,8 @@ namespace InsureYouAI.Controllers
         [HttpGet]
         public IActionResult CreateContact()
         {
+            ViewBag.ControllerName = "İletişim";
+            ViewBag.PageName = "Yeni İletişim Bilgisi Oluşturma";
             return View();
         }
 
@@ -36,6 +40,8 @@ namespace InsureYouAI.Controllers
         [HttpGet]
         public IActionResult UpdateContact(int id)
         {
+            ViewBag.ControllerName = "İletişim";
+            ViewBag.PageName = "Mevcut İletişim Bilgisi Güncelleme";
             var value = _context.Contacts.Find(id);
             return View(value);
         }

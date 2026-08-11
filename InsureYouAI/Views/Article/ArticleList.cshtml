@@ -44,7 +44,12 @@
                     }
                 </tbody>
             </table>
-            <a href="/Article/CreateArticle" class="btn btn-info">Yeni Makale Girişi</a>
+
+            <div class="d-flex gap-2">
+                <a href="/Article/CreateArticle" class="btn btn-outline-secondary">Yeni Makale Girişi</a>
+                <a href="/Article/CreateArticleWithAI/" class="btn btn-outline-primary">Yapay Zeka Makale Oluşturucu</a>
+            </div>
+           
             <div>
                 @Html.PagedListPager(Model, page => Url.Action("ArticleList", new { page }), new PagedListRenderOptions
                 {

@@ -1,6 +1,7 @@
 ﻿using InsureYouAI.Context;
 using InsureYouAI.Entities;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList.Extensions;
 
 namespace InsureYouAI.Controllers
 {
@@ -12,12 +13,12 @@ namespace InsureYouAI.Controllers
             _context = context;
         }
 
-        public IActionResult CategoryList()
+        public IActionResult CategoryList(int page = 1)
         {
             ViewBag.ControllerName = "Kategoriler";
             ViewBag.PageName = "Kategori Listesi";
             var categories = _context.Categories.ToList();
-            return View(categories);
+            return View(categories.ToPagedList(page, 8));
         }
 
         [HttpGet]
@@ -26,7 +27,7 @@ namespace InsureYouAI.Controllers
             return View();
         }
 
-        [HttpPost] 
+        [HttpPost]
         public IActionResult CreateCategory(Category category)
         {
             _context.Categories.Add(category);
@@ -47,7 +48,7 @@ namespace InsureYouAI.Controllers
             _context.Categories.Update(category);
             _context.SaveChanges();
             return RedirectToAction("CategoryList");
-        } 
+        }
 
         public IActionResult DeleteCategory(int id)
         {

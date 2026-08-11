@@ -8,6 +8,8 @@ namespace InsureYouAI.Controllers
         [Authorize]
         public IActionResult ChatWithAI()
         {
+            ViewBag.ControllerName = "Chat";
+            ViewBag.PageName = "ChatBot";
             return View();
         }
     }

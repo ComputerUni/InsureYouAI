@@ -24,7 +24,11 @@
                         @item.Title
                     </a>
                 </h2>
-                <p>@(item.Content.Length > 300 ? item.Content.Substring(0, 300) + "..." : item.Content)</p>
+                @{
+                    var rawText = System.Text.RegularExpressions.Regex.Replace(item.Content ?? "", "<.*?>", "");
+                    var plainText = System.Net.WebUtility.HtmlDecode(rawText);
+                }
+                <p>@(plainText.Length > 300 ? plainText.Substring(0, 300) + "..." : plainText)</p>
                 <div class="blog__btn">
                     <a href="/Blog/BlogDetail/@item.ArticleId" class="btn">Devamını Oku </a>
                 </div>

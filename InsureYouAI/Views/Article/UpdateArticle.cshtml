@@ -18,6 +18,8 @@
         <hr />
         <form method="post">
             <input type="hidden" asp-for="ArticleId" />
+            <input type="hidden" asp-for="CreatedDate" />
+
             <div class="mb-3">
                 <label class="form-label fw-semibold">Başlık</label>
                 <input type="text" asp-for="Title" class="form-control form-control-lg" />
@@ -32,10 +34,18 @@
             </div>
             <div class="mb-3">
                 <label class="form-label fw-semibold">Kategori</label>
-                <input type="text" asp-for="CategoryId" class="form-control form-control-lg" />
+                <select class="form-select" asp-items="ViewBag.categories" asp-for="CategoryId">
+                    <option value="">Kategori Seçiniz</option>
+                </select>
             </div>
             <div class="mb-3">
-                <label class="form-label fw-semibold">Kategori</label>
+                <label class="form-label fw-semibold">Yazar</label>
+                <select class="form-select" asp-items="ViewBag.authors" asp-for="AppUserId">
+                    <option value="">Yazar Seçiniz</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Makale İçeriği</label>
                 <textarea rows="10" asp-for="Content" class="form-control form-control-lg"></textarea>
             </div>
             <div class="mt-4">

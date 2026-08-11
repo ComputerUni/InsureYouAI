@@ -4,12 +4,21 @@
     ViewData["Title"] = "Mesajlar";
     Layout = "~/Views/AdminLayout/Index.cshtml";
     int count = 0;
+    string currentPriority = ViewBag.SelectedPriority as string;
 }
 
 <div class="card">
     <div class="card-body">
         <div class="d-flex align-items-center">
             <h5 class="mb-0">Gelen Mesajlar Listesi</h5>
+            <form method="get" asp-action="MessageList" class="d-flex align-items-center gap-2">
+                <select name="priority" class="form-select form-select-sm" onchange="this.form.submit()">
+                    <option value="">Tüm Öncelikler</option>
+                    <!option value="High" @(currentPriority == "High" ? "selected" : "")>Yüksek</!option>
+                    <!option value="Medium" @(currentPriority == "Medium" ? "selected" : "")>Orta</!option>
+                    <!option value="Low" @(currentPriority == "Low" ? "selected" : "")>Düşük</!option>
+                </select>
+            </form>
             <form class="ms-auto position-relative">
                 <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-search"></i></div>
                 <input class="form-control ps-5" type="text" placeholder="Aramak için bir kelime giriniz...">
@@ -25,7 +34,7 @@
                         <th>Email</th>
                         <th>Mesaj Detayı</th>
                         <th>Mesaj Tarihi</th>
-                        <th>Okundu mu?</th>
+                        <th>Öncelik</th>
                         <th>İşlemler</th>
                     </tr>
                 </thead>
@@ -38,9 +47,26 @@
                             <td>@message.NameSurname</td>
                             <td>@message.Subject</td>
                             <td>@message.Email</td>
-                            <td>@(message.MessageDetail?.Length > 15 ? message.MessageDetail.Substring(0,15) + "..." : message.MessageDetail)</td>
+                            <td>@(message.MessageDetail?.Length > 15 ? message.MessageDetail.Substring(0, 15) + "..." : message.MessageDetail)</td>
+                            @if (message.Priority == "Low")
+                            {
+                                <td><span class="badge text-bg-success">Düşük</span></td>
+                            }
+                            else if (message.Priority == "Medium")
+                            {
+                                <td><span class="badge text-bg-warning">Orta</span></td>
+                            }
+                            else if (message.Priority == "High")
+                            {
+                                <td><span class="badge text-bg-danger">Yüksek</span></td>
+
+                            }
+                            else
+                            {
+                                <td><span class="badge text-bg-info">Yok</span></td>
+
+                            }
                             <td>@message.SendDate.ToString("dd-MMM-yyyy")</td>
-                            <td><a href="#" class="btn btn-warning">Durum</a></td>
                             <td>
                                 <div class="table-actions d-flex align-items-center gap-3 fs-6">
                                     <a href="/Default/Index/" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mesajı Aç"><i class="bi bi-eye-fill"></i></a>
@@ -54,7 +80,7 @@
             </table>
             <a href="/Message/CreateMessage" class="btn btn-info">Yeni Mesaj Girişi</a>
             <div>
-                @Html.PagedListPager(Model, page => Url.Action("MessageList", new { page }), new PagedListRenderOptions
+                @Html.PagedListPager(Model, page => Url.Action("MessageList", new { page, priority = ViewBag.SelectedPriority }), new PagedListRenderOptions
                 {
                     UlElementClasses = new[] { "pagination", "mb-0", "mt-4" },
                     LiElementClasses = new[] { "page-item" },

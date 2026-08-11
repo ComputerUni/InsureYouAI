@@ -1,6 +1,7 @@
 ﻿using InsureYouAI.Context;
 using InsureYouAI.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
 using System.Security.Claims;
@@ -22,20 +23,36 @@ namespace InsureYouAI.Controllers
             ViewBag.ControllerName = "Makaleler";
             ViewBag.PageName = "Makale Listesi";
             var articles = _context.Articles.Include(x => x.AppUser).ToList();
-            return View(articles.ToPagedList(page,8));
+            return View(articles.ToPagedList(page, 8));
         }
 
         [HttpGet]
         public IActionResult CreateArticle()
         {
+            ViewBag.ControllerName = "Makaleler";
+            ViewBag.PageName = "Yeni Makale Oluştur";
+            var categories = _context.Categories.Select(x => new SelectListItem
+            {
+                Text = x.CategoryName,
+                Value = x.CategoryId.ToString()
+            }).ToList();
+
+            ViewBag.categories = categories;
+
+            var authors = _context.Users.Select(x => new SelectListItem
+            {
+                Text = x.Name + " " + x.Surname,
+                Value = x.Id
+            }).ToList();
+
+            ViewBag.authors = authors;
+
             return View();
         }
 
         [HttpPost]
         public IActionResult CreateArticle(Article article)
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            article.AppUserId = userId;
             article.CreatedDate = DateTime.Now;
             _context.Articles.Add(article);
             _context.SaveChanges();
@@ -46,12 +63,33 @@ namespace InsureYouAI.Controllers
         public IActionResult UpdateArticle(int id)
         {
             var value = _context.Articles.Find(id);
+
+            var categories = _context.Categories.Select(x => new SelectListItem
+            {
+                Text = x.CategoryName,
+                Value = x.CategoryId.ToString(),
+                Selected = x.CategoryId == value.CategoryId
+            }).ToList();
+
+            ViewBag.categories = categories;
+
+            var authors = _context.Users.Select(x => new SelectListItem
+            {
+                Text = x.Name + " " + x.Surname,
+                Value = x.Id,
+                Selected = x.Id == value.AppUserId
+            }).ToList();
+
+            ViewBag.authors = authors;
+
+
             return View(value);
         }
 
         [HttpPost]
         public IActionResult UpdateArticle(Article article)
         {
+
             _context.Articles.Update(article);
             _context.SaveChanges();
             return RedirectToAction("ArticleList");
@@ -68,6 +106,8 @@ namespace InsureYouAI.Controllers
         [HttpGet]
         public IActionResult CreateArticleWithAI()
         {
+            ViewBag.ControllerName = "Makaleler";
+            ViewBag.PageName = "AI ile Yeni Makale Oluştur";
             return View();
         }
 

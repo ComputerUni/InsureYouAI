@@ -3,7 +3,7 @@
     <h2>
         @Model.Title
     </h2>
-    <div class="meta-info">
+    <img src="@Model.CoverImageUrl" style="width: 100%; height: 500px; object-fit: cover;" />    <div class="meta-info">
         <ul>
             <li><i class="fal fa-user"></i> Yazar:  @Model.AppUser?.Name @Model.AppUser?.Surname</li>
             <li><i class="fal fa-comments"></i> Yorum:  @Model.Comments?.Count()</li>

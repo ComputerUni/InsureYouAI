@@ -18,6 +18,8 @@ namespace InsureYouAI.Controllers
 
         public IActionResult AboutItemList()
         {
+            ViewBag.ControllerName = "Hakkımızda Ögeleri";
+            ViewBag.PageName = "Mevcut Hakkımızda Ögeleri Listesi";
             var aboutItems = _context.AboutItems.ToList();
             return View(aboutItems);
         }
@@ -25,6 +27,8 @@ namespace InsureYouAI.Controllers
         [HttpGet]
         public IActionResult CreateAboutItem()
         {
+            ViewBag.ControllerName = "Hakkımızda Ögeleri";
+            ViewBag.PageName = "Yeni Hakkımızda Ögesi Ekleme Sayfası";
             return View();
         }
 
@@ -39,6 +43,8 @@ namespace InsureYouAI.Controllers
         [HttpGet]
         public IActionResult UpdateAboutItem(int id)
         {
+            ViewBag.ControllerName = "Hakkımızda Ögeleri";
+            ViewBag.PageName = "Mevcut Hakkımızda Ögesi Güncelleme Sayfası";
             var value = _context.AboutItems.Find(id);
             return View(value);
         }
@@ -62,6 +68,8 @@ namespace InsureYouAI.Controllers
         [HttpGet]
         public async Task<IActionResult> CreateAboutItemWithAI()
         {
+            ViewBag.ControllerName = "Hakkımızda Ögeleri";
+            ViewBag.PageName = "AI ile Yeni Hakkımızda Ögesi Oluştur";
             var prompt = "Bir sigorta şirketi için 'Hakkımızda' sayfasında kullanılacak, güven verici ve etkileyici kısa madde metinleri oluştur. Örnek: 'Geleceğinizi güvence altına alan kapsamlı sigorta çözümleri sunuyoruz.' gibi. En az 10 farklı madde yaz. Her madde tek cümle olsun.";
             var apiKey = "";
             var requestUrl = "https://openrouter.ai/api/v1/chat/completions";

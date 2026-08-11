@@ -36,6 +36,7 @@ builder.Services.AddControllersWithViews(options =>
 });
 
 builder.Services.AddScoped<ForecastService>();
+builder.Services.AddScoped<AIService>();
 
 builder.Services.AddHttpClient();
 
