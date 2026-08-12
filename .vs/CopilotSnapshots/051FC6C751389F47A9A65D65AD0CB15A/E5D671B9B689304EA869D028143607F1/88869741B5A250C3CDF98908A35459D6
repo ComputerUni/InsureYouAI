@@ -1,4 +1,4 @@
-# 🤖 InsureYouAI - Yapay Zeka Destekli Sigorta Yönetim Platformu
+﻿# 🤖 InsureYouAI - Yapay Zeka Destekli Sigorta Yönetim Platformu
 
 ## 📋 İçindekiler
 - [Proje Özeti](#-proje-özeti)
@@ -67,7 +67,9 @@
 
 ### 👤 Kullanıcı Yönetimi
 - **ASP.NET Core Identity**: Güvenli kullanıcı kimlik doğrulama
+- **Rol Tabanlı Erişim**: Admin, Moderatör, Müşteri rolleri
 - **Kullanıcı Profili**: Detaylı profil bilgileri ve sigorta geçmişi
+- **Şifre Sıfırlama**: Güvenli şifre kurtarma mekanizması
 
 ### 📱 Yönetim Paneli
 - **Responsive Admin Dashboard**: Mobil uyumlu yönetim arayüzü
@@ -424,6 +426,32 @@ var requestBody = new
 
 ---
 
+## 👥 Kullanıcı Yönetimi
+
+### Roller
+1. **Admin**
+   - Tüm sisteme erişim
+   - Kullanıcı yönetimi
+   - İçerik yönetimi
+
+2. **Moderatör**
+   - İçerik yönetimi
+   - Yorumların denetlenmesi
+   - Raporlar
+
+3. **Müşteri/Kullanıcı**
+   - Profil bilgilerini güncelleme
+   - Poliçe görüntüleme
+   - AI sohbet erişimi
+   - Blog okuma
+
+### Kimlik Doğrulama
+- ASP.NET Core Identity
+- JWT Token seçeneği
+- Sosyal medya girişi desteği (genişletilebilir)
+
+---
+
 ## 📁 Proje Yapısı
 
 ```
@@ -508,29 +536,40 @@ InsureYouAI/
 
 ## 🎨 Ekran Görüntüleri
 
-Proje klasöründe `screenshots` dizininde özelliklerin görsel gösterileri bulunmaktadır:
+Proje klasöründe `screenshots` dizininde özelliklerin görsel gösterileri bulunmaktadır (1.png - 21.png arası):
 
-![1](screenshots/1.png)
-![2](screenshots/2.png)
-![3](screenshots/3.png)
-![4](screenshots/4.png)
-![5](screenshots/5.png)
-![6](screenshots/6.png)
-![7](screenshots/7.png)
-![8](screenshots/8.png)
-![9](screenshots/9.png)
-![10](screenshots/10.png)
-![11](screenshots/11.png)
-![12](screenshots/12.png)
-![13](screenshots/13.png)
-![14](screenshots/14.png)
-![15](screenshots/15.png)
-![16](screenshots/16.png)
-![17](screenshots/17.png)
-![18](screenshots/18.png)
-![19](screenshots/19.png)
-![20](screenshots/20.png)
-![21](screenshots/21.png)
+### Ana Sayfa Görselleri
+- **1.png** - Ana Sayfa Üst Kısım
+- **2.png** - Hizmetler Bölümü
+- **3.png** - Fiyatlandırma Paketleri
+- **4.png** - Müşteri Yorumları
+- **5.png** - Blog Yazıları
+
+### Admin Dashboard
+- **6.png** - Dashboard Ana Ekran
+- **7.png** - Satış Grafikleri
+- **8.png** - Tahmin Geçmişi
+- **9.png** - Kullanıcı Yönetimi
+
+### AI Özellikleri
+- **10.png** - AI Sohbet Arayüzü
+- **11.png** - Belge Analizi Sonuçları
+- **12.png** - Görüntü Oluşturma
+
+### İçerik Yönetimi
+- **13.png** - Makale Yazma
+- **14.png** - Blog Yayınlama
+- **15.png** - Kategori Yönetimi
+
+### Kullanıcı Alanı
+- **16.png** - Profil Sayfası
+- **17.png** - Poliçe Görüntüleme
+- **18.png** - İletişim Formu
+
+### Mobil Uyum
+- **19.png** - Mobil Responsive
+- **20.png** - Tablet Versiyonu
+- **21.png** - Mobile Menü
 
 **Tam ekran görüntüleri için proje klasöründeki `screenshots` dizinini açınız.**
 

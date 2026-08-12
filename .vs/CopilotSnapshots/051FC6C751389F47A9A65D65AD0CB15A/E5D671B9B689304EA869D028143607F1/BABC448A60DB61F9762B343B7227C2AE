@@ -1,4 +1,4 @@
-# 🤖 InsureYouAI - Yapay Zeka Destekli Sigorta Yönetim Platformu
+﻿# 🤖 InsureYouAI - Yapay Zeka Destekli Sigorta Yönetim Platformu
 
 ## 📋 İçindekiler
 - [Proje Özeti](#-proje-özeti)
@@ -67,7 +67,9 @@
 
 ### 👤 Kullanıcı Yönetimi
 - **ASP.NET Core Identity**: Güvenli kullanıcı kimlik doğrulama
+- **Rol Tabanlı Erişim**: Admin, Moderatör, Müşteri rolleri
 - **Kullanıcı Profili**: Detaylı profil bilgileri ve sigorta geçmişi
+- **Şifre Sıfırlama**: Güvenli şifre kurtarma mekanizması
 
 ### 📱 Yönetim Paneli
 - **Responsive Admin Dashboard**: Mobil uyumlu yönetim arayüzü
@@ -424,6 +426,32 @@ var requestBody = new
 
 ---
 
+## 👥 Kullanıcı Yönetimi
+
+### Roller
+1. **Admin**
+   - Tüm sisteme erişim
+   - Kullanıcı yönetimi
+   - İçerik yönetimi
+
+2. **Moderatör**
+   - İçerik yönetimi
+   - Yorumların denetlenmesi
+   - Raporlar
+
+3. **Müşteri/Kullanıcı**
+   - Profil bilgilerini güncelleme
+   - Poliçe görüntüleme
+   - AI sohbet erişimi
+   - Blog okuma
+
+### Kimlik Doğrulama
+- ASP.NET Core Identity
+- JWT Token seçeneği
+- Sosyal medya girişi desteği (genişletilebilir)
+
+---
+
 ## 📁 Proje Yapısı
 
 ```
@@ -532,6 +560,6 @@ Proje klasöründe `screenshots` dizininde özelliklerin görsel gösterileri bu
 ![20](screenshots/20.png)
 ![21](screenshots/21.png)
 
-**Tam ekran görüntüleri için proje klasöründeki `screenshots` dizinini açınız.**
+*Tam ekran görüntüleri için `screenshots` klasörü içinde ilgili resim dosyalarını açınız.*
 
 ---
