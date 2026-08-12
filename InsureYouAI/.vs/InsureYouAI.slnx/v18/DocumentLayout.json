@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\InsureYouAI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\INDEX.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\API_REFERENCE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\QUICKSTART.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\ARCHITECTURE.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
@@ -46,64 +34,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "INDEX.md",
-              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\INDEX.md",
-              "RelativeDocumentMoniker": "..\\INDEX.md",
-              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\INDEX.md",
-              "RelativeToolTip": "..\\INDEX.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-08-12T19:01:05.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "API_REFERENCE.md",
-              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\API_REFERENCE.md",
-              "RelativeDocumentMoniker": "..\\API_REFERENCE.md",
-              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\API_REFERENCE.md",
-              "RelativeToolTip": "..\\API_REFERENCE.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-08-12T19:00:22.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QUICKSTART.md",
-              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\QUICKSTART.md",
-              "RelativeDocumentMoniker": "..\\QUICKSTART.md",
-              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\QUICKSTART.md",
-              "RelativeToolTip": "..\\QUICKSTART.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-08-12T18:59:42.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ARCHITECTURE.md",
-              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\ARCHITECTURE.md",
-              "RelativeDocumentMoniker": "..\\ARCHITECTURE.md",
-              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\ARCHITECTURE.md",
-              "RelativeToolTip": "..\\ARCHITECTURE.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-08-12T18:59:18.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\README.md",
               "RelativeDocumentMoniker": "..\\README.md",
               "ToolTip": "C:\\Users\\BURHAN\\Desktop\\InsureYouAI\\README.md",
               "RelativeToolTip": "..\\README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAACICAAAAAAAAAAAAADUCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2026-08-12T18:58:39.021Z",
               "EditorCaption": ""

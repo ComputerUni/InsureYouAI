@@ -1,7 +1,5 @@
 # 🤖 InsureYouAI - Yapay Zeka Destekli Sigorta Yönetim Platformu
 
-![Logo](InsureYouAI/wwwroot/defaultimages/logo.png)
-
 ## 📋 İçindekiler
 - [Proje Özeti](#-proje-özeti)
 - [Önemli Özellikler](#-önemli-özellikler)
@@ -540,60 +538,28 @@ InsureYouAI/
 
 Proje klasöründe `screenshots` dizininde özelliklerin görsel gösterileri bulunmaktadır:
 
-### Ana Sayfa Görselleri
-- **1.png** - Ana Sayfa Üst Kısım
-- **2.png** - Hizmetler Bölümü
-- **3.png** - Fiyatlandırma Paketleri
-- **4.png** - Müşteri Yorumları
-- **5.png** - Blog Yazıları
-
-### Admin Dashboard
-- **6.png** - Dashboard Ana Ekrane
-- **7.png** - Satış Grafikleri
-- **8.png** - Tahmin Geçmiş
-- **9.png** - Kullanıcı Yönetimi
-
-### AI Özellikleri
-- **10.png** - AI Sohbet Arayüzü
-- **11.png** - Belge Analizi Sonuçları
-- **12.png** - Görüntü Oluşturma
-
-### İçerik Yönetimi
-- **13.png** - Makale Yazma
-- **14.png** - Blog Yayınlama
-- **15.png** - Kategori Yönetimi
-
-### Kullanıcı Alanı
-- **16.png** - Profil Sayfası
-- **17.png** - Poliçe Görüntüleme
-- **18.png** - İletişim Formu
-
-### Mobil Uyum
-- **19.png** - Mobil Responsive
-- **20.png** - Tablet Versiyonu
-- **21.png** - Mobile Menü
+![1](screenshots/1.png)
+![2](screenshots/2.png)
+![3](screenshots/3.png)
+![4](screenshots/4.png)
+![5](screenshots/5.png)
+![6](screenshots/6.png)
+![7](screenshots/7.png)
+![8](screenshots/8.png)
+![9](screenshots/9.png)
+![10](screenshots/10.png)
+![11](screenshots/11.png)
+![12](screenshots/12.png)
+![13](screenshots/13.png)
+![14](screenshots/14.png)
+![15](screenshots/15.png)
+![16](screenshots/16.png)
+![17](screenshots/17.png)
+![18](screenshots/18.png)
+![19](screenshots/19.png)
+![20](screenshots/20.png)
+![21](screenshots/21.png)
 
 *Tam ekran görüntüleri için `screenshots` klasörü içinde ilgili resim dosyalarını açınız.*
-
----
-
-## 🔒 Güvenlik
-
-- **ASP.NET Core Identity**: Güvenli kullanıcı kimlik doğrulama
-- **HTTPS**: Tüm bağlantılar şifreli
-- **AntiCSRF Tokens**: İstek sahteciliğine karşı koruma
-- **SQL Injection Koruması**: Entity Framework parametreleme
-- **Rol Tabanlı Yetkilendirme**: Hassas işlemlerde kontrol
-- **API Key Yönetimi**: Güvenli konfigürasyon dosyaları
-
----
-
-## 🚀 Performans Optimizasyonları
-
-1. **Veritabanı Dizini**: Sık sorgulandığı alanlarda
-2. **Caching**: Statik içeriklerin cache'lenmesi
-3. **CDN Entegrasyonu**: Görsellerin yüksek hız dağıtımı
-4. **Lazy Loading**: İmajlar ve içerik sayfa geçişine göre yükleme
-5. **Async/Await**: Eşzamanlı olmayan işlemler
 
 ---
