@@ -1,17 +1,17 @@
 # 🤖 InsureYouAI - Yapay Zeka Destekli Sigorta Yönetim Platformu
 
 ## 📋 İçindekiler
-- [Proje Özeti](#proje-özeti)
-- [Önemli Özellikler](#önemli-özellikler)
+- [Proje Özeti](#proje-ozeti)
+- [Önemli Özellikler](#onemli-ozellikler)
 - [Teknoloji Stack](#teknoloji-stack)
 - [Sistem Mimarisi](#sistem-mimarisi)
-- [Kurulum ve Yapılandırma](#kurulum-ve-yapılandırma)
-- [Veritabanı Yapısı](#veritabanı-yapısı)
-- [Modüller ve Özellikler](#modüller-ve-özellikler)
-- [API Entegrasyonları](#api-entegrasyonları)
-- [Kullanıcı Yönetimi](#kullanıcı-yönetimi)
-- [Proje Yapısı](#proje-yapısı)
-- [Ekran Görüntüleri](#ekran-görüntüleri)
+- [Kurulum ve Yapılandırma](#kurulum-ve-yapilandirma)
+- [Veritabanı Yapısı](#veritabani-yapisi)
+- [Modüller ve Özellikler](#moduller-ve-ozellikler)
+- [API Entegrasyonları](#api-entegrasyonlari)
+- [Kullanıcı Yönetimi](#kullanici-yonetimi)
+- [Proje Yapısı](#proje-yapisi)
+- [Ekran Görüntüleri](#ekran-goruntuleri)
 
 ---
 
