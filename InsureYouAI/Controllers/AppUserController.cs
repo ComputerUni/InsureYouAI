@@ -43,12 +43,10 @@ namespace InsureYouAI.Controllers
             ViewBag.articleCount = articleCount;
             ViewBag.commentCount = commentCount;
 
-            //Kullanıcı Bilgilerini Çekme
             var user = await _userManager.FindByIdAsync(id);
             if (user == null)
                 return NotFound();
 
-            //Kullanıcıya Ait Makale Listesi
             var articles = await _context.Articles.Where(x => x.AppUserId == id).Select(y => y.Content).ToListAsync();
 
             if (articles.Count == 0)
@@ -57,12 +55,10 @@ namespace InsureYouAI.Controllers
                 return View(user);
             }
 
-            //Makaleleri tek bir metinde toplayalım.
             var allArticles = string.Join("\n\n", articles);
 
             var apiKey = "";
 
-            //Promptun Yazılması
             var prompt = $@"
 Sen bir sigorta sektöründe uzman bir içerik analistisin.
 Elinizde, bir sigorta şirketinin çalışanının yazdığı tüm makaleler var. Bu makaleler
@@ -84,7 +80,6 @@ Makaleler:
 
 Lütfen çıktıyı profesyonel rapor formatında, madde madde ve en sonda 5 maddelik aksiyon listesi ile ver.";
 
-            //AI Kısmı
 
             using (var client = new HttpClient())
             {
@@ -101,7 +96,6 @@ Lütfen çıktıyı profesyonel rapor formatında, madde madde ve en sonda 5 mad
                     temperature = 0.2
                 };
 
-                //Json Dönüşümleri
                 var json = JsonSerializer.Serialize(requestBody);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -114,7 +108,6 @@ Lütfen çıktıyı profesyonel rapor formatında, madde madde ve en sonda 5 mad
                     return View(user);
                 }
 
-                //Json Veri İçinden Yapıyı Okuma
 
                 try
                 {
@@ -151,12 +144,10 @@ Lütfen çıktıyı profesyonel rapor formatında, madde madde ve en sonda 5 mad
             ViewBag.articleCount = articleCount;
             ViewBag.commentCount = commentCount;
 
-            //Kullanıcı Bilgilerini Çekme
             var user = await _userManager.FindByIdAsync(id);
             if (user == null)
                 return NotFound();
 
-            //Kullanıcıya Ait Yorum Listesi
             var comments = await _context.Comments.Where(x => x.AppUserId == id).Select(y => y.CommentDetail).ToListAsync();
 
             if (comments.Count == 0)
@@ -165,12 +156,10 @@ Lütfen çıktıyı profesyonel rapor formatında, madde madde ve en sonda 5 mad
                 return View(user);
             }
 
-            //Yorumları tek bir metinde toplayalım.
             var allComments = string.Join("\n\n", comments);
 
             var apiKey = "";
 
-            //Promptun Yazılması
             var prompt = $@"
 Sen kullanıcı davranış analizi yapan bir yapay zeka uzmanısın.
 Aşağıdaki yorumlara göre kullanıcı değerlendir.
@@ -188,7 +177,6 @@ Yorumlar:
 
 {allComments}";
 
-            //AI Kısmı
 
             using (var client = new HttpClient())
             {
@@ -205,7 +193,6 @@ Yorumlar:
                     temperature = 0.2
                 };
 
-                //Json Dönüşümleri
                 var json = JsonSerializer.Serialize(requestBody);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -218,7 +205,6 @@ Yorumlar:
                     return View(user);
                 }
 
-                //Json Veri İçinden Yapıyı Okuma
 
                 try
                 {
