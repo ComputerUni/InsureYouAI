@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InsureYouAI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89b3887ee05cf815a8f1e431a00994e50620620e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33a8fb01a605ce2183b6534ef987eb33546a56b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("InsureYouAI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InsureYouAI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

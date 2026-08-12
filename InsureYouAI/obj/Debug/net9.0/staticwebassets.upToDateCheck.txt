@@ -1,3 +1,4 @@
+wwwroot\aitalk.gif
 wwwroot\colorlib-error-404-7\css\style.css
 wwwroot\colorlib-error-404-7\index.html
 wwwroot\colorlib-error-404-7\readme.txt
@@ -383,6 +384,7 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\policypdf\Test.pdf
 wwwroot\snacked\ltr\app-chat-box.html
 wwwroot\snacked\ltr\app-emailbox.html
 wwwroot\snacked\ltr\app-emailread.html
@@ -2055,6 +2057,16 @@ wwwroot\snacked\rtl\table-advance-tables.html
 wwwroot\snacked\rtl\table-basic-table.html
 wwwroot\snacked\rtl\table-datatable.html
 wwwroot\snacked\rtl\widgets.html
+wwwroot\voices\eleven_2ac11982-25aa-4180-b6a7-918bfb8f4db6.mp3
+wwwroot\voices\eleven_2fed970e-24fe-4fb0-8c59-9fa0a69e3f12.mp3
+wwwroot\voices\eleven_3a5f295a-f0a9-42d3-8121-18ee173391d5.mp3
+wwwroot\voices\eleven_6204569c-5619-4ce4-b0fe-c63aada934fb.mp3
+wwwroot\voices\eleven_a486a847-9452-417b-a0a5-a05a3b9c07b8.mp3
+wwwroot\voices\eleven_c0901fc1-fded-401c-a205-78376889d9b1.mp3
+wwwroot\voices\eleven_c7c0aca5-10ce-41d8-a7b0-de74563a12fe.mp3
+wwwroot\voices\voice_32cd1cd8-dc2b-4e70-8110-1eaad8332a06.mp3
+wwwroot\voices\voice_4f331592-46b5-4ec0-b8d6-089bbad70797.mp3
+wwwroot\voices\voice_73a1cb46-8553-4650-8cfc-282f09e8ec00.mp3
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\wwwroot\css\site.css
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\wwwroot\favicon.ico
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css

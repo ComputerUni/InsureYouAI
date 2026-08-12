@@ -1796,3 +1796,10 @@ C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\ref\InsureYouAI
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\dkrzzdpjcf-{0}-46ivnnk30l-46ivnnk30l.gz
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\mp5yg3rbie-{0}-bon9ngzove-bon9ngzove.gz
 C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\obj\Debug\net9.0\compressed\0qtpm20w04-{0}-oapm0uvoo5-oapm0uvoo5.gz
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\UglyToad.PdfPig.Core.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\UglyToad.PdfPig.DocumentLayoutAnalysis.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\UglyToad.PdfPig.Fonts.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\UglyToad.PdfPig.Package.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\UglyToad.PdfPig.Tokenization.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\UglyToad.PdfPig.Tokens.dll
+C:\Users\BURHAN\Desktop\InsureYouAI\InsureYouAI\bin\Debug\net9.0\UglyToad.PdfPig.dll

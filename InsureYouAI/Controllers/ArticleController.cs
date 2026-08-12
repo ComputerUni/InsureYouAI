@@ -22,7 +22,7 @@ namespace InsureYouAI.Controllers
         {
             ViewBag.ControllerName = "Makaleler";
             ViewBag.PageName = "Makale Listesi";
-            var articles = _context.Articles.Include(x => x.AppUser).ToList();
+            var articles = _context.Articles.Include(x => x.AppUser).Include(x => x.Category).ToList();
             return View(articles.ToPagedList(page, 8));
         }
 

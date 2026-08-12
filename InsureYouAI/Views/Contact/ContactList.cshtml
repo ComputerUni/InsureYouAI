@@ -4,46 +4,83 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<div class="card">
-    <div class="card-body">
-        <div class="d-flex align-items-center">
-            <h5 class="mb-0">Sigorta İletişim Listesi</h5>
-            <form class="ms-auto position-relative">
-                <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-search"></i></div>
-                <input class="form-control ps-5" type="text" placeholder="search">
-            </form>
+<div class="card border-0 shadow-sm rounded-3">
+    <div class="card-body p-4">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+            <div>
+                <h5 class="mb-1 fw-bold text-dark">Sigorta İletişim Listesi</h5>
+                <span class="text-muted small">İletişim bilgilerini ve adres detaylarını buradan yönetebilirsiniz.</span>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <form class="position-relative" style="width: 250px;">
+                    <div class="position-absolute top-50 translate-middle-y search-icon px-3 text-muted"><i class="bi bi-search"></i></div>
+                    <input class="form-control ps-5 form-control-sm bg-light border-0" type="text" placeholder="İletişim ara...">
+                </form>
+
+                <a href="/Contact/CreateContact" class="btn btn-primary btn-sm d-inline-flex align-items-center gap-1">
+                    <i class="bi bi-plus-lg"></i> Yeni İletişim
+                </a>
+            </div>
         </div>
-        <div class="table-responsive mt-3">
-            <table class="table align-middle">
-                <thead class="table-secondary">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
                     <tr>
-                        <th>Email</th>
-                        <th>Telefon</th>
-                        <th>Adres</th>
-                        <th>Açıklama</th>
-                        <th>İşlemler</th>
+                        <th class="text-muted small fw-semibold">Email</th>
+                        <th class="text-muted small fw-semibold">Telefon</th>
+                        <th class="text-muted small fw-semibold">Adres</th>
+                        <th class="text-muted small fw-semibold" style="max-width:300px;">Açıklama</th>
+                        <th class="text-muted small fw-semibold text-center" style="width: 140px;">İşlemler</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var contact in Model)
+                    @if (Model != null && Model.Any())
+                    {
+                        @foreach (var contact in Model)
+                        {
+                            <tr>
+                                <td class="fw-medium text-dark">
+                                    <a href="mailto:@contact.Email" class="text-decoration-none text-dark">@contact.Email</a>
+                                </td>
+                                <td>
+                                    <a href="tel:@contact.Phone" class="text-decoration-none text-muted small">@contact.Phone</a>
+                                </td>
+                                <td class="text-muted small">@contact.Address</td>
+                                <td class="text-muted small" style="white-space:normal; word-break:break-word; max-width:300px;">
+                                    @contact.Description
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <a href="/Default/Index/" class="btn btn-sm btn-light text-primary" data-bs-toggle="tooltip" title="Sitede Gör">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a href="/Contact/UpdateContact/@contact.ContactId" class="btn btn-sm btn-light text-warning" data-bs-toggle="tooltip" title="Güncelle">
+                                            <i class="bi bi-pencil-fill"></i>
+                                        </a>
+                                        <a href="/Contact/DeleteContact/@contact.ContactId" class="btn btn-sm btn-light text-danger" data-bs-toggle="tooltip" title="Sil">
+                                            <i class="bi bi-trash-fill"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
                     {
                         <tr>
-                            <td>@contact.Email</td>
-                            <td>@contact.Phone</td>
-                            <td>@contact.Address</td>
-                            <td style="white-space:normal; word-break:break-word; max-width:400px;">@contact.Description</td>
-                            <td>
-                                <div class="table-actions d-flex align-items-center gap-3 fs-6">
-                                    <a href="/Default/Index/" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitede Gör"><i class="bi bi-eye-fill"></i></a>
-                                    <a href="/Contact/UpdateContact/@contact.ContactId" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Güncelle"><i class="bi bi-pencil-fill"></i></a>
-                                    <a href="/Contact/DeleteContact/@contact.ContactId" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sil"><i class="bi bi-trash-fill"></i></a>
-                                </div>
-                            </td>
+                            <td colspan="5" class="text-center py-4 text-muted small">Herhangi bir iletişim kaydı bulunamadı.</td>
                         </tr>
                     }
                 </tbody>
             </table>
-            <a href="/Contact/CreateContact" class="btn btn-info">Yeni İletişim Bilgisi Girişi</a>
         </div>
+        <div class="mt-4 pt-3 border-top d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <a href="/Contact/CreateContact" class="btn btn-info btn-sm text-white d-inline-flex align-items-center gap-1">
+                <i class="bi bi-plus-circle"></i> Yeni İletişim Bilgisi Girişi
+            </a>
+            <span class="text-muted small">Toplam <strong>@Model?.Count</strong> iletişim kaydı listeleniyor</span>
+        </div>
+
     </div>
 </div>

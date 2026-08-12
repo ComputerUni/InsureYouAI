@@ -5,47 +5,81 @@
     int count = 0;
 }
 
-<div class="card">
-    <div class="card-body">
-        <div class="d-flex align-items-center">
-            <h5 class="mb-0">Referans Listesi</h5>
-            <form class="ms-auto position-relative">
-                <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-search"></i></div>
-                <input class="form-control ps-5" type="text" placeholder="search">
-            </form>
-        </div>
-        <div class="table-responsive mt-3">
-            <table class="table align-middle">
-                <thead class="table-secondary">
-                    <tr>
-                        <th>#</th>
-                        <th>Ad Soyad</th>
-                        <th>Yorum Detayı</th>
-                        <th>Unvan</th>
-                        <th>İşlemler</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var testimonial in Model)
-                    {
-                        count++;
-                        <tr>
-                            <td>@count</td>
-                            <td>@testimonial.NameSurname</td>
-                            <td>@(testimonial.CommentDetail.Length > 50 ? testimonial.CommentDetail.Substring(0,50) + "..." : testimonial.CommentDetail)</td>
-                            <td>@testimonial.Title</td>
-                            <td>
-                                <div class="table-actions d-flex align-items-center gap-3 fs-6">
-                                    <a href="/Default/Index/" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitede Gör"><i class="bi bi-eye-fill"></i></a>
-                                    <a href="/Testimonial/UpdateTestimonial/@testimonial.TestimonialId" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Güncelle"><i class="bi bi-pencil-fill"></i></a>
-                                    <a href="/Testimonial/DeleteTestimonial/@testimonial.TestimonialId" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sil"><i class="bi bi-trash-fill"></i></a>
-                                </div>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-            <a href="/Testimonial/CreateTestimonial" class="btn btn-info">Yeni Referans Girişi</a>
-        </div>
+<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+    <div>
+        <h5 class="mb-1 fw-bold text-dark">Referans Listesi</h5>
+        <span class="text-muted small">Müşteri referanslarını ve yorumlarını buradan yönetebilirsiniz.</span>
     </div>
+
+    <div class="d-flex align-items-center gap-3">
+        <form class="position-relative" style="width: 250px;">
+            <div class="position-absolute top-50 translate-middle-y search-icon px-3 text-muted"><i class="bi bi-search"></i></div>
+            <input class="form-control ps-5 form-control-sm bg-light border-0" type="text" placeholder="Referans ara...">
+        </form>
+
+        <a href="/Testimonial/CreateTestimonial" class="btn btn-primary btn-sm d-inline-flex align-items-center gap-1">
+            <i class="bi bi-plus-lg"></i> Yeni Referans
+        </a>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover align-middle mb-0">
+        <thead class="table-light">
+            <tr>
+                <th class="text-muted small fw-semibold" style="width: 60px;">#</th>
+                <th class="text-muted small fw-semibold" style="width: 25%;">Ad Soyad</th>
+                <th class="text-muted small fw-semibold">Yorum Detayı</th>
+                <th class="text-muted small fw-semibold" style="width: 20%;">Unvan</th>
+                <th class="text-muted small fw-semibold text-center" style="width: 140px;">İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var testimonial in Model)
+                {
+                    count++;
+                    <tr>
+                        <td class="fw-semibold text-muted">@count</td>
+                        <td class="fw-medium text-dark">@testimonial.NameSurname</td>
+                        <td class="text-muted small">
+                            @(testimonial.CommentDetail.Length > 50 ? testimonial.CommentDetail.Substring(0, 50) + "..." : testimonial.CommentDetail)
+                        </td>
+                        <td>
+                            <span class="badge bg-light text-secondary border px-2 py-1 small">@testimonial.Title</span>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center justify-content-center gap-2">
+                                <a href="/Default/Index/" class="btn btn-sm btn-light text-primary" data-bs-toggle="tooltip" title="Sitede Gör">
+                                    <i class="bi bi-eye-fill"></i>
+                                </a>
+                                <a href="/Testimonial/UpdateTestimonial/@testimonial.TestimonialId" class="btn btn-sm btn-light text-warning" data-bs-toggle="tooltip" title="Güncelle">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </a>
+                                <a href="/Testimonial/DeleteTestimonial/@testimonial.TestimonialId" class="btn btn-sm btn-light text-danger" data-bs-toggle="tooltip" title="Sil">
+                                    <i class="bi bi-trash-fill"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" class="text-center py-4 text-muted small">Herhangi bir referans kaydı bulunamadı.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="mt-4 pt-3 border-top d-flex align-items-center justify-content-between flex-wrap gap-2">
+    <a href="/Testimonial/CreateTestimonial" class="btn btn-info btn-sm text-white d-inline-flex align-items-center gap-1">
+        <i class="bi bi-plus-circle"></i> Yeni Referans Girişi
+    </a>
+    <span class="text-muted small">Toplam <strong>@Model?.Count</strong> referans listeleniyor</span>
+</div>
+
 </div>

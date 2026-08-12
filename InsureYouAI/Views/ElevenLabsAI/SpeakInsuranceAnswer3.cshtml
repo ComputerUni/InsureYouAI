@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = ViewBag.PageName ?? "Sesli Yapay Zeka Asistanı";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid px-4 py-3">
+    <div class="mb-4">
+        <h4 class="fw-bold text-dark mb-0">
+            <i class="bi bi-robot text-primary me-2"></i> "Sesli Yanıt & Akıllı Sohbet Alanı"
+        </h4>
+        <p class="text-muted small mt-1">Tek pencerede sohbet edin, yapay zeka yanıtlarını otomatik olarak sesli okusun.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-9">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+
+                    <h6 class="fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+                        Otomatik Sesli Sohbet Akışı
+                    </h6>
+                    <div class="chat-container p-3 mb-4 bg-light rounded-3 border" style="max-height: 400px; overflow-y: auto;">
+
+                        <div class="d-flex mb-3">
+                            <div class="bg-white text-dark p-3 rounded-3 shadow-sm border small w-100">
+                                <strong>AI Asistan:</strong> Merhaba! Bana bir şeyler yazın, yanıtı hem ekranda göreceksiniz hem de otomatik olarak sesli okuyacağım.
+                            </div>
+                        </div>
+
+                        @if (Context.Request.Method == "POST" && ViewBag.Answer != null)
+                        {
+                            <div class="d-flex justify-content-end mb-3">
+                                <div class="bg-primary text-white p-3 rounded-3 shadow-sm small" style="max-width: 80%;">
+                                    <strong>Siz:</strong> @Context.Request.Form["text"]
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <div class="bg-white text-dark p-3 rounded-3 shadow-sm border small w-100" style="white-space: pre-wrap;">
+                                    <strong>AI Asistan:</strong> <span id="aiResponseText">@ViewBag.Answer</span>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <form method="post" asp-action="SpeakInsuranceAnswer3" class="d-flex gap-2">
+                        @Html.AntiForgeryToken()
+                        <input type="text" name="text" class="form-control" placeholder="Asistana bir şeyler yazın..." required autocomplete="off" />
+                        <button type="submit" class="btn btn-primary d-inline-flex align-items-center justify-content-center gap-1 px-4">
+                            <i class="bi bi-send"></i> Gönder
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const responseElement = document.getElementById("aiResponseText");
+
+        if (responseElement && 'speechSynthesis' in window) {
+            const textToSpeak = responseElement.textContent || responseElement.innerText;
+
+            if (textToSpeak.trim() !== "") {
+                window.speechSynthesis.cancel();
+
+                const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                utterance.lang = 'tr-TR'; 
+                utterance.rate = 1.0; 
+                utterance.pitch = 1.0; 
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    });
+</script>

@@ -1,0 +1,184 @@
+﻿@model InsureYouAI.Models.AIInsuranceRecommendationViewModel
+@{
+    ViewData["Title"] = "Kişiselleştirilmiş Plan Oluştur";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid py-4 px-4">
+
+    <div class="mb-4">
+        <h4 class="fw-bold text-dark mb-0">
+            <i class="bi bi-robot text-primary me-2"></i> AI Sigorta Öneri Formu
+        </h4>
+        <p class="text-muted small mt-1">Kullanıcı bilgilerini doldurun, yapay zeka en uygun sigorta paketlerini analiz etsin.</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- SOL: Form -->
+        <div class="col-12 col-lg-6">
+            <form asp-action="CreaterUserCustomizePlan" method="post">
+                @Html.AntiForgeryToken()
+
+                <!-- Kişisel Bilgiler -->
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-body p-4">
+                        <h6 class="fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+                            <span class="bg-primary bg-opacity-10 text-primary rounded-2 px-2 py-1"><i class="bi bi-person"></i></span>
+                            Kişisel Bilgiler
+                        </h6>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold text-muted">Yaş</label>
+                                <input asp-for="Age" type="number" class="form-control form-control-sm" placeholder="Örn: 35" min="18" max="100" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold text-muted">Meslek</label>
+                                <input asp-for="Occupation" type="text" class="form-control form-control-sm" placeholder="Örn: Mühendis" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold text-muted">Şehir</label>
+                                <input asp-for="City" type="text" class="form-control form-control-sm" placeholder="Örn: İstanbul" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold text-muted">Medeni Durum</label>
+                                <select asp-for="MaritalStatus" class="form-select form-select-sm">
+                                    <option value="">Seçiniz</option>
+                                    <option value="Bekar">Bekar</option>
+                                    <option value="Evli">Evli</option>
+                                    <option value="Boşanmış">Boşanmış</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold text-muted">Çocuk Sayısı</label>
+                                <input asp-for="ChildrenCount" type="number" class="form-control form-control-sm" placeholder="0" min="0" max="20" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold text-muted">Seyahat Sıklığı</label>
+                                <select asp-for="TravelFrequency" class="form-select form-select-sm">
+                                    <option value="">Seçiniz</option>
+                                    <option value="Yılda 1-2">Yılda 1-2 kez</option>
+                                    <option value="Yılda 3-5">Yılda 3-5 kez</option>
+                                    <option value="Sık seyahat">Sık seyahat</option>
+                                    <option value="Seyahat etmiyorum">Seyahat etmiyorum</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağlık & Bütçe -->
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-body p-4">
+                        <h6 class="fw-bold text-dark mb-3 d-flex align-items-center gap-2">
+                            <span class="bg-success bg-opacity-10 text-success rounded-2 px-2 py-1"><i class="bi bi-heart-pulse"></i></span>
+                            Sağlık & Bütçe
+                        </h6>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label small fw-semibold text-muted">Aylık Sigorta Paketine Ödenebilecek Maksimum Bütçe (₺)</label>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-text bg-light text-muted">₺</span>
+                                    <input asp-for="MonthlyBudget" type="number" class="form-control" placeholder="Örn: 2000" min="0" />
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label small fw-semibold text-muted">Kapsam Önceliği</label>
+                                <select asp-for="CoveragePriority" class="form-select form-select-sm">
+                                    <option value="">Seçiniz</option>
+                                    <option value="Sağlık">Sağlık</option>
+                                    <option value="Seyahat">Seyahat</option>
+                                    <option value="Araç">Araç</option>
+                                    <option value="Genel">Genel</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check form-switch">
+                                    <input asp-for="HasChronicDisease" class="form-check-input" type="checkbox" id="chronicSwitch"
+                                           onchange="document.getElementById('chronicDetail').classList.toggle('d-none', !this.checked)" />
+                                    <label class="form-check-label small fw-semibold text-muted" for="chronicSwitch">
+                                        Kronik Hastalık Mevcut
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 @(Model.HasChronicDisease ? "" : "d-none")" id="chronicDetail">
+                                <label class="form-label small fw-semibold text-muted">Hastalık Detayı</label>
+                                <textarea asp-for="ChronicDiseaseDetails" class="form-control form-control-sm" rows="2"
+                                          placeholder="Örn: Diyabet, Hipertansiyon..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end gap-2">
+                    <a href="/PricingPlan/Index" class="btn btn-sm btn-light border px-4">İptal</a>
+                    <button type="submit" class="btn btn-sm btn-primary px-4 d-inline-flex align-items-center gap-2">
+                        <i class="bi bi-stars"></i> AI ile Analiz Et
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- SAĞ: Sonuç -->
+        <div class="col-12 col-lg-6">
+            @if (!string.IsNullOrEmpty(Model.RecommendedPackage))
+            {
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h6 class="fw-bold text-dark mb-4 d-flex align-items-center">
+                            AI Analiz Sonucu
+                        </h6>
+
+                        <!-- Önerilen Paket -->
+                        <div class="bg-primary bg-opacity-10 rounded-3 p-3 mb-3 d-flex align-items-center gap-3">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                 style="width:44px;height:44px;">
+                                <i class="bi bi-trophy"></i>
+                            </div>
+                            <div>
+                                <div class="small text-white">En Uygun Paket</div>
+                                <div class="fw-bold text-white fs-6">@Model.RecommendedPackage</div>
+                            </div>
+                        </div>
+
+                        <!-- İkinci Seçenek -->
+                        <div class="bg-light rounded-3 p-3 mb-3 d-flex align-items-center gap-3">
+                            <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                 style="width:44px;height:44px;">
+                                <i class="bi bi-bookmark"></i>
+                            </div>
+                            <div>
+                                <div class="small text-muted">İkinci Seçenek</div>
+                                <div class="fw-bold text-dark fs-6">@Model.SecondBestPackage</div>
+                            </div>
+                        </div>
+
+                        <!-- Analiz Metni -->
+                        <div>
+                            <div class="small fw-semibold text-muted mb-2">
+                                <i class="bi bi-chat-text me-1"></i> Analiz
+                            </div>
+                            <div class="bg-light rounded-3 p-3 text-dark small" style="line-height:1.8;">
+                                @Model.AnalysisText
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+            else
+            {
+                <!-- Henüz analiz yapılmadı -->
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4 d-flex flex-column align-items-center justify-content-center text-center" style="min-height:300px;">
+                        <i class="bi bi-robot display-4 text-muted mb-3"></i>
+                        <div class="fw-semibold text-dark mb-1">Henüz Analiz Yapılmadı</div>
+                        <p class="small text-muted mb-0">Formu doldurup <strong>AI ile Analiz Et</strong> butonuna tıklayın,<br>yapay zeka size en uygun paketi önersin.</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>

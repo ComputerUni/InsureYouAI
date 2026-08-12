@@ -3,14 +3,13 @@
 @{
     ViewData["Title"] = "Mesajlar";
     Layout = "~/Views/AdminLayout/Index.cshtml";
-    int count = (Model.PageNumber - 1) * Model.PageSize; // Sayfalar arası sıra numarasının doğru devam etmesi için
+    int count = (Model.PageNumber - 1) * Model.PageSize;
     string currentPriority = ViewBag.SelectedPriority as string;
 }
 
 <div class="card shadow-sm border-0 rounded-4">
     <div class="card-body p-4">
 
-        <!-- Üst Başlık ve Filtreleme Alanı -->
         <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
             <div>
                 <h4 class="mb-1 text-dark fw-bold">Gelen Mesajlar Listesi</h4>
@@ -18,7 +17,7 @@
             </div>
 
             <div class="d-flex align-items-center gap-2 flex-wrap">
-                <!-- Önceliğe Göre Filtreleme -->
+
                 <form method="get" asp-action="MessageList" class="d-flex align-items-center">
                     <div class="input-group input-group-sm">
                         <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-funnel"></i></span>
@@ -31,7 +30,6 @@
                     </div>
                 </form>
 
-                <!-- Arama Kutusu -->
                 <form class="position-relative">
                     <input class="form-control form-control-sm ps-5 rounded-pill bg-light border-0" type="text" placeholder="Mesajlarda ara...">
                     <span class="position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"><i class="bi bi-search"></i></span>
@@ -39,7 +37,6 @@
             </div>
         </div>
 
-        <!-- Tablo Alanı -->
         <div class="table-responsive">
             <table class="table table-hover align-middle mb-0">
                 <thead class="table-light text-uppercase fs-7 text-secondary">
@@ -50,7 +47,9 @@
                         <th class="py-3">Email</th>
                         <th class="py-3">Mesaj Detayı</th>
                         <th class="py-3">Mesaj Tarihi</th>
+                        <th class="py-3">AI Kategori</th>
                         <th class="py-3 text-center">Öncelik</th>
+                        <th class="py-3 text-center">Okudun mu?</th>
                         <th class="py-3 text-end rounded-end">İşlemler</th>
                     </tr>
                 </thead>
@@ -76,6 +75,7 @@
                                     @(message.MessageDetail?.Length > 25 ? message.MessageDetail.Substring(0, 25) + "..." : message.MessageDetail)
                                 </td>
                                 <td><span class="text-muted small">@message.SendDate.ToString("dd MMM yyyy HH:mm")</span></td>
+                                <td><span class="badge text-info small">@message.AICategory</span></td>
                                 <td class="text-center">
                                     @if (message.Priority == "Low")
                                     {
@@ -94,11 +94,29 @@
                                         <span class="badge px-3 py-2 bg-info-subtle text-info fw-semibold rounded-pill">Yok</span>
                                     }
                                 </td>
+                                <td class="text-center">
+                                    @if (message.IsRead)
+                                    {
+                                        <span class="badge px-3 py-2 bg-success-subtle text-success fw-semibold rounded-pill">
+                                            <i class="bi bi-check-circle me-1"></i> Okundu
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge px-3 py-2 bg-secondary-subtle text-secondary fw-semibold rounded-pill">
+                                            <i class="bi bi-circle me-1"></i> Okunmadı
+                                        </span>
+                                    }
+                                </td>
                                 <td class="text-end">
                                     <div class="d-flex align-items-center justify-content-end gap-2">
-                                        <a href="/Default/Index/" class="btn btn-sm btn-light text-primary" data-bs-toggle="tooltip" title="Mesajı Aç">
+                                        <a href="/Message/ReadMessage/@message.MessageId" class="btn btn-sm btn-light text-primary" data-bs-toggle="tooltip" title="Mesajı Oku">
                                             <i class="bi bi-eye"></i>
                                         </a>
+                                        <a href="/Default/Index/" class="btn btn-sm btn-light border text-info" data-bs-toggle="tooltip" title="Sitede Gör" target="_blank">
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+
                                         <a href="/Message/UpdateMessage/@message.MessageId" class="btn btn-sm btn-light text-warning" data-bs-toggle="tooltip" title="Güncelle">
                                             <i class="bi bi-pencil"></i>
                                         </a>
@@ -120,7 +138,6 @@
             </table>
         </div>
 
-        <!-- Alt Bölüm: Yeni Ekle Butonu ve Sayfalama -->
         <div class="d-flex flex-column flex-md-row align-items-center justify-content-between mt-4 pt-3 border-top gap-3">
             <a href="/Message/CreateMessage" class="btn btn-primary btn-sm px-4 rounded-pill shadow-sm">
                 <i class="bi bi-plus-lg me-1"></i> Yeni Mesaj Girişi

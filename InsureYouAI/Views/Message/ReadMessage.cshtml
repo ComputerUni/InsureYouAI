@@ -1,0 +1,73 @@
+﻿@model InsureYouAI.Entities.Message
+@{
+    ViewData["Title"] = "Mesaj Detayı";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container py-4" style="max-width:700px;">
+
+    <!-- Geri Dön -->
+    <a href="/Message/MessageList" class="btn btn-sm btn-light border mb-3 d-inline-flex align-items-center gap-1">
+        <i class="bi bi-arrow-left"></i> Geri Dön
+    </a>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+
+            <div class="d-flex align-items-center gap-3 pb-3 mb-4 border-bottom">
+               
+                <div class="flex-grow-1">
+                    <div class="fw-bold text-dark fs-6">@Model.NameSurname</div>
+                    <div class="small text-muted">@Model.Email</div>
+                </div>
+                <div class="d-flex flex-column align-items-end gap-1">
+                    <span class="badge bg-success-subtle text-success fw-semibold px-3 py-2 rounded-pill">
+                        <i class="bi bi-check-circle me-1"></i> Okundu
+                    </span>
+                    <span class="small text-muted">@Model.SendDate.ToString("dd MMM yyyy HH:mm")</span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <span class="small text-muted text-uppercase fw-semibold">Konu</span>
+                <div class="fw-semibold text-dark mt-1">@Model.Subject</div>
+            </div>
+
+            <div class="d-flex gap-2 mb-4 flex-wrap">
+                @if (!string.IsNullOrEmpty(Model.AICategory))
+                {
+                    <span class="badge bg-gradient-royal bg-opacity-10 text-white fw-semibold px-3 py-2 rounded-pill">
+                        <i class="bi bi-robot me-1"></i> @Model.AICategory
+                    </span>
+                }
+
+                @if (Model.Priority == "High")
+                {
+                    <span class="badge bg-danger-subtle text-danger fw-semibold px-3 py-2 rounded-pill">🔴 Yüksek Öncelik</span>
+                }
+                else if (Model.Priority == "Medium")
+                {
+                    <span class="badge bg-warning-subtle text-warning fw-semibold px-3 py-2 rounded-pill">🟡 Orta Öncelik</span>
+                }
+                else if (Model.Priority == "Low")
+                {
+                    <span class="badge bg-success-subtle text-success fw-semibold px-3 py-2 rounded-pill">🟢 Düşük Öncelik</span>
+                }
+            </div>
+
+            <div class="mb-4">
+                <span class="small text-muted text-uppercase fw-semibold">Mesaj</span>
+                <div class="bg-light rounded-3 p-4 mt-2 text-dark" style="line-height:1.8; white-space:pre-wrap;">@Model.MessageDetail</div>
+            </div>
+
+            <div class="d-flex gap-2 flex-wrap">
+                <a href="/Message/DeleteMessage/@Model.MessageId"
+                   class="btn btn-sm btn-light border text-danger d-inline-flex align-items-center gap-1"
+                   onclick="return confirm('Bu mesajı silmek istediğinize emin misiniz?')">
+                    <i class="bi bi-trash"></i> Sil
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

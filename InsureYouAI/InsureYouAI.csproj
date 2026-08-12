@@ -26,6 +26,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.ML" Version="5.0.0" />
     <PackageReference Include="Microsoft.ML.TimeSeries" Version="5.0.0" />
+    <PackageReference Include="PdfPig" Version="0.1.15" />
     <PackageReference Include="X.PagedList.Mvc.Core" Version="10.5.9" />
   </ItemGroup>
 

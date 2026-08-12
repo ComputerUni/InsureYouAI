@@ -3,48 +3,112 @@
     ViewData["Title"] = "Hakkımda Bölümü";
     Layout = "~/Views/AdminLayout/Index.cshtml";
     int count = 0;
+    bool isLimitReached = Model != null && Model.Count >= 3;
 }
 
-<div class="card">
-    <div class="card-body">
-        <div class="d-flex align-items-center">
-            <h5 class="mb-0">Hakkımda Bölümü Maddeler Sayfası</h5>
-            <form class="ms-auto position-relative">
-                <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-search"></i></div>
-                <input class="form-control ps-5" type="text" placeholder="search">
-            </form>
+<div class="card border-0 shadow-sm rounded-3">
+    <div class="card-body p-4">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+            <div>
+                <h5 class="mb-1 fw-bold text-dark">Hakkımda Bölümü Maddeler Sayfası</h5>
+                <span class="text-muted small">Hakkımda alanına ait alt maddeleri buradan yönetebilirsiniz (En fazla 3 adet eklenebilir).</span>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <form class="position-relative" style="width: 250px;">
+                    <div class="position-absolute top-50 translate-middle-y search-icon px-3 text-muted"><i class="bi bi-search"></i></div>
+                    <input class="form-control ps-5 form-control-sm bg-light border-0" type="text" placeholder="Madde ara...">
+                </form>
+
+                @if (isLimitReached)
+                {
+                    <button type="button" class="btn btn-primary btn-sm d-inline-flex align-items-center gap-1 opacity-50" style="cursor: not-allowed;" title="Maksimum 3 madde sınırına ulaşıldı." disabled>
+                        <i class="bi bi-plus-lg"></i> Yeni Madde
+                    </button>
+                }
+                else
+                {
+                    <a href="/AboutItem/CreateAboutItem" class="btn btn-primary btn-sm d-inline-flex align-items-center gap-1">
+                        <i class="bi bi-plus-lg"></i> Yeni Madde
+                    </a>
+                }
+            </div>
         </div>
-        <div class="table-responsive mt-3">
-            <table class="table align-middle">
-                <thead class="table-secondary">
+        @if (isLimitReached)
+        {
+            <div class="alert alert-warning py-2 px-3 small d-flex align-items-center gap-2 mb-3 rounded-2 border-0 shadow-sm" role="alert">
+                <i class="bi bi-exclamation-triangle-fill text-warning fs-6"></i>
+                <div>
+                    <strong>Maksimum Sınır:</strong> Hakkımda maddeleri en fazla 3 adet olabilir. Yeni bir madde eklemek için mevcut maddelerden birini silmeniz gerekmektedir.
+                </div>
+            </div>
+        }
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
                     <tr>
-                        <th>#</th>
-                        <th>Detay</th>
-                        <th>İşlemler</th>
+                        <th class="text-muted small fw-semibold" style="width: 60px;">#</th>
+                        <th class="text-muted small fw-semibold">Detay</th>
+                        <th class="text-muted small fw-semibold text-center" style="width: 140px;">İşlemler</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var aboutItem in Model)
+                    @if (Model != null && Model.Any())
                     {
-                        count++;
+                        @foreach (var aboutItem in Model)
+                        {
+                            count++;
+                            <tr>
+                                <td class="fw-semibold text-muted">@count</td>
+                                <td class="text-dark">@aboutItem.Detail</td>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-center gap-2">
+                                        <a href="/Default/Index/" class="btn btn-sm btn-light text-primary" data-bs-toggle="tooltip" title="Sitede Gör">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </a>
+                                        <a href="/AboutItem/UpdateAboutItem/@aboutItem.AboutItemId" class="btn btn-sm btn-light text-warning" data-bs-toggle="tooltip" title="Güncelle">
+                                            <i class="bi bi-pencil-fill"></i>
+                                        </a>
+                                        <a href="/AboutItem/DeleteAboutItem/@aboutItem.AboutItemId" class="btn btn-sm btn-light text-danger" data-bs-toggle="tooltip" title="Sil">
+                                            <i class="bi bi-trash-fill"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
                         <tr>
-                            <td>@count</td>
-                            <td>@aboutItem.Detail</td>
-                            <td>
-                                <div class="table-actions d-flex align-items-center gap-3 fs-6">
-                                    <a href="/Default/Index/" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitede Gör"><i class="bi bi-eye-fill"></i></a>
-                                    <a href="/AboutItem/UpdateAboutItem/@aboutItem.AboutItemId" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Güncelle"><i class="bi bi-pencil-fill"></i></a>
-                                    <a href="/AboutItem/DeleteAboutItem/@aboutItem.AboutItemId" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sil"><i class="bi bi-trash-fill"></i></a>
-                                </div>
-                            </td>
+                            <td colspan="3" class="text-center py-4 text-muted small">Herhangi bir madde bulunamadı.</td>
                         </tr>
                     }
                 </tbody>
             </table>
-            <div>
-                <a href="/AboutItem/CreateAboutItem" class="btn btn-outline-secondary">Yeni Hakkımızda Madde Girişi</a>
-                <a href="/AboutItem/CreateAboutItemWithAI" class="btn btn-outline-info">AI ile Hakkımızda Maddesi Oluşturma</a>
-            </div>
         </div>
+        <div class="mt-4 pt-3 border-top d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+                @if (isLimitReached)
+                {
+                    <button type="button" class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-1 opacity-50" style="cursor: not-allowed;" disabled>
+                        <i class="bi bi-plus-circle"></i> Yeni Hakkımızda Madde Girişi
+                    </button>
+                    <button type="button" class="btn btn-dark btn-sm d-inline-flex align-items-center gap-1 opacity-50" style="cursor: not-allowed;" disabled>
+                        <i class="bi bi-stars"></i> AI ile Hakkımızda Maddesi Oluşturma
+                    </button>
+                }
+                else
+                {
+                    <a href="/AboutItem/CreateAboutItem" class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-1">
+                        <i class="bi bi-plus-circle"></i> Yeni Hakkımızda Madde Girişi
+                    </a>
+                    <a href="/AboutItem/CreateAboutItemWithAI" class="btn btn-dark btn-sm d-inline-flex align-items-center gap-1">
+                        <i class="bi bi-stars"></i> AI ile Hakkımızda Maddesi Oluşturma
+                    </a>
+                }
+            </div>
+            <span class="text-muted small">Toplam <strong>@Model?.Count</strong> / 3 kayıt listeleniyor</span>
+        </div>
+
     </div>
 </div>

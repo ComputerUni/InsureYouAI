@@ -36,6 +36,20 @@ namespace InsureYouAI.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> ReadMessage(int id)
+        {
+            ViewBag.ControllerName = "Gelen Mesajlar";
+            ViewBag.PageName = "Mesaj Detayı";
+            var value = _context.Messages.Find(id);
+            if (value != null)
+            {
+                value.IsRead = true;
+                await _context.SaveChangesAsync();
+            }
+            return View(value);
+        }
+
+        [HttpGet]
         public IActionResult CreateMessage()
         {
             return View();
@@ -47,9 +61,6 @@ namespace InsureYouAI.Controllers
             var combinedText = $"{message.Subject} - {message.MessageDetail}";
             var predictedCategory = await _aiService.PredictCategory(combinedText);
             var predictedPriority = await _aiService.PredictPriority(combinedText);
-
-            Console.WriteLine("Category: " + predictedCategory);
-            Console.WriteLine("Priority: " + predictedPriority);
 
             message.AICategory = predictedCategory;
             message.Priority = predictedPriority;

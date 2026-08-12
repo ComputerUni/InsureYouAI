@@ -93,6 +93,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "PdfPig": {
+              "target": "Package",
+              "version": "[0.1.15, )"
+            },
             "X.PagedList.Mvc.Core": {
               "target": "Package",
               "version": "[10.5.9, )"

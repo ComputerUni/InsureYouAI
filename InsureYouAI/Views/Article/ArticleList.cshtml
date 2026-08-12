@@ -3,61 +3,132 @@
 @{
     ViewData["Title"] = "Makaleler";
     Layout = "~/Views/AdminLayout/Index.cshtml";
+
+    var colorPalette = new[]
+    {
+        ("#e8f5e9", "#2e7d32"),
+        ("#e3f2fd", "#1565c0"),
+        ("#fff3e0", "#e65100"),
+        ("#fce4ec", "#c62828"),
+        ("#f3e5f5", "#6a1b9a"),
+        ("#e0f7fa", "#00695c"),
+        ("#fffde7", "#f57f17"),
+        ("#ede7f6", "#4527a0"),
+        ("#fbe9e7", "#bf360c"),
+        ("#e8eaf6", "#283593"),
+    };
+
+    (string bg, string text) GetCategoryStyle(string name)
+    {
+        if (string.IsNullOrEmpty(name)) return ("#f1f3f5", "#495057");
+        var index = Math.Abs(name.GetHashCode()) % colorPalette.Length;
+        return colorPalette[index];
+    }
 }
 
-<div class="card">
-    <div class="card-body">
-        <div class="d-flex align-items-center">
-            <h5 class="mb-0">Makale Listesi</h5>
-            <form class="ms-auto position-relative">
-                <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-search"></i></div>
-                <input class="form-control ps-5" type="text" placeholder="search">
-            </form>
+<div class="card border-0 shadow-sm rounded-3">
+    <div class="card-body p-4">
+
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+            <div>
+                <h5 class="mb-1 fw-bold text-dark">Makale Listesi</h5>
+                <span class="text-muted small">Toplam <strong>@Model.TotalItemCount</strong> makale</span>
+            </div>
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+                <div class="input-group" style="width:220px">
+                    <span class="input-group-text bg-light border-end-0 text-muted">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 bg-light" placeholder="Makale ara...">
+                </div>
+                <a href="/Article/CreateArticle" class="btn btn-outline-secondary btn-sm">
+                    <i class="bi bi-plus-lg me-1"></i> Yeni Makale
+                </a>
+                <a href="/Article/CreateArticleWithAI/" class="btn btn-dark btn-sm">
+                    <i class="bi bi-stars me-1"></i> YZ ile Oluştur
+                </a>
+            </div>
         </div>
-        <div class="table-responsive mt-3">
-            <table class="table align-middle">
-                <thead class="table-secondary">
+
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
                     <tr>
-                        <th>#</th>
-                        <th>Başlık</th>
-                        <th>Yazar</th>
-                        <th>Oluşturma Tarihi</th>
-                        <th>İşlemler</th>
+                        <th class="text-muted small fw-semibold" style="width:50px">#</th>
+                        <th class="text-muted small fw-semibold">Başlık</th>
+                        <th class="text-muted small fw-semibold">Kategori</th>
+                        <th class="text-muted small fw-semibold">Yazar</th>
+                        <th class="text-muted small fw-semibold">Tarih</th>
+                        <th class="text-muted small fw-semibold" style="width:120px">İşlemler</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var article in Model)
                     {
+                        var catName = article.Category?.CategoryName ?? "Genel";
+                        var (catBg, catText) = GetCategoryStyle(catName);
+
                         <tr>
-                            <td>@article.ArticleId</td>
-                            <td>@article.Title</td>
-                            <td>@article.AppUser.Name @article.AppUser.Surname</td>
-                            <td>@article.CreatedDate.ToString("dd-MMM-yyyy")</td>
+                            <td class="text-muted small">@article.ArticleId</td>
+                            <td class="fw-medium text-dark" style="max-width:260px">
+                                <span class="d-inline-block text-truncate" style="max-width:240px" title="@article.Title">
+                                    @article.Title
+                                </span>
+                            </td>
                             <td>
-                                <div class="table-actions d-flex align-items-center gap-3 fs-6">
-                                    <a href="/Blog/BlogDetail/@article.ArticleId" class="text-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitede Gör"><i class="bi bi-eye-fill"></i></a>
-                                    <a href="/Article/UpdateArticle/@article.ArticleId" class="text-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Güncelle"><i class="bi bi-pencil-fill"></i></a>
-                                    <a href="/Article/DeleteArticle/@article.ArticleId" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sil"><i class="bi bi-trash-fill"></i></a>
+                                <span class="badge rounded-pill px-3 py-2 small fw-semibold"
+                                      style="background:@catBg; color:@catText">
+                                    @catName
+                                </span>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center"
+                                         style="width:30px;height:30px;font-size:0.75rem;flex-shrink:0">
+                                        @(article.AppUser?.Name?.Substring(0, 1).ToUpper())
+                                    </div>
+                                    <span class="small text-dark">
+                                        @article.AppUser?.Name @article.AppUser?.Surname
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-muted small">
+                                <i class="bi bi-calendar3 me-1"></i>
+                                @article.CreatedDate.ToString("dd MMM yyyy")
+                            </td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <a href="/Blog/BlogDetail/@article.ArticleId"
+                                       class="btn btn-sm btn-light text-info"
+                                       data-bs-toggle="tooltip" title="Sitede Gör">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </a>
+                                    <a href="/Article/UpdateArticle/@article.ArticleId"
+                                       class="btn btn-sm btn-light text-warning"
+                                       data-bs-toggle="tooltip" title="Güncelle">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </a>
+                                    <a href="/Article/DeleteArticle/@article.ArticleId"
+                                       class="btn btn-sm btn-light text-danger"
+                                       data-bs-toggle="tooltip" title="Sil">
+                                        <i class="bi bi-trash-fill"></i>
+                                    </a>
                                 </div>
                             </td>
                         </tr>
                     }
                 </tbody>
             </table>
-
-            <div class="d-flex gap-2">
-                <a href="/Article/CreateArticle" class="btn btn-outline-secondary">Yeni Makale Girişi</a>
-                <a href="/Article/CreateArticleWithAI/" class="btn btn-outline-primary">Yapay Zeka Makale Oluşturucu</a>
-            </div>
-           
-            <div>
-                @Html.PagedListPager(Model, page => Url.Action("ArticleList", new { page }), new PagedListRenderOptions
-                {
-                    UlElementClasses = new[] { "pagination", "mb-0", "mt-4" },
-                    LiElementClasses = new[] { "page-item" },
-                    PageClasses = new[] { "page-link" }
-                })
-            </div>
         </div>
+
+        <div class="d-flex align-items-center justify-content-end mt-4 pt-3 border-top">
+            @Html.PagedListPager(Model, page => Url.Action("ArticleList", new { page }), new PagedListRenderOptions
+            {
+                UlElementClasses = new[] { "pagination", "mb-0" },
+                LiElementClasses = new[] { "page-item" },
+                PageClasses = new[] { "page-link" }
+            })
+        </div>
+
     </div>
 </div>
